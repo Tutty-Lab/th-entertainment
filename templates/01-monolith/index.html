@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 fill=%27black%27/%3E%3Ctext x=%2710%27 y=%2770%27 fill=%27white%27 font-size=%2760%27%3ETH%3C/text%3E%3C/svg%3E"><title>TH Entertainment — Monolith</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--fg:#eee;--mut:#666;--line:#222;--card:#111;--disp:Anton}
+*{box-sizing:border-box}body{margin:0;background:#000;color:#eee;font-family:Inter,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.loader{position:fixed;inset:0;background:#000;z-index:100;display:grid;place-items:center;animation:out .6s 1.6s forwards}
+.loader b{font:80px Anton;letter-spacing:.05em;animation:flick 1.6s steps(1)}
+@keyframes flick{0%,20%,40%{opacity:0}10%,30%,60%,100%{opacity:1}}@keyframes out{to{opacity:0;visibility:hidden}}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:20px 32px;mix-blend-mode:difference}
+nav .logo{font:28px Anton;letter-spacing:.05em}nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:12px;letter-spacing:.2em;font-weight:600}
+nav .cta{border:1px solid #fff;padding:10px 18px;font-size:11px;letter-spacing:.2em;font-weight:800}
+.hero{height:100vh;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;overflow:hidden;
+background:radial-gradient(ellipse at 70% 30%,#2a2a2a 0,#000 60%)}
+.hero::before{content:"";position:absolute;inset:-20%;background:repeating-linear-gradient(90deg,transparent 0 120px,rgba(255,255,255,.03) 120px 121px);animation:pan 20s linear infinite}
+@keyframes pan{to{transform:translateX(121px)}}
+.hero h1{font:clamp(90px,22vw,340px)/.82 Anton;margin:0;letter-spacing:-.01em;position:relative}
+.hero h1 span{display:block;overflow:hidden}.hero h1 span i{display:block;font-style:normal;transform:translateY(105%);animation:up 1s cubic-bezier(.2,.9,.2,1) forwards}
+.hero h1 span:nth-child(2) i{animation-delay:.15s;color:transparent;-webkit-text-stroke:2px #fff}
+@keyframes up{to{transform:none}}.hero h1 i{animation-delay:1.8s!important}.hero h1 span:nth-child(2) i{animation-delay:1.95s!important}
+.hero .meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:24px;font-size:13px;letter-spacing:.2em;color:#999;position:relative}
+.hero .meta button{background:#fff;color:#000;border:0;padding:16px 32px;font-weight:800;letter-spacing:.2em;cursor:pointer}
+.marq{border-block:1px solid #222;padding:18px 0;white-space:nowrap;overflow:hidden;font:42px Anton;letter-spacing:.04em}
+.marq div{display:inline-block;animation:mq 25s linear infinite}@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:120px 32px}h2{font:clamp(48px,8vw,120px)/.9 Anton;margin:0 0 48px}h2 em{font-style:normal;color:#555}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#222;border:1px solid #222}
+.card{background:#000;padding:32px;min-height:420px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;transition:.4s;position:relative;overflow:hidden}
+.card:hover{background:#fff;color:#000}.card .st{font-size:11px;letter-spacing:.2em;font-weight:800;border:1px solid currentColor;padding:6px 10px;align-self:flex-start}
+.card>*{position:relative;z-index:1}.card .th-bg{opacity:.35}.card:hover .th-bg{opacity:.9;transform:scale(1.06)}.card:hover{color:#fff;background:#000}.card .d{font:64px/1 Anton}.card h3{font:40px/1 Anton;margin:8px 0}.card p{margin:0;font-size:13px;letter-spacing:.1em;opacity:.6}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px}
+.stats b{font:clamp(80px,10vw,160px)/1 Anton;display:block}.stats span{letter-spacing:.2em;font-size:12px;color:#888}
+.svc{border-top:1px solid #222}.svc div{display:flex;gap:32px;align-items:baseline;padding:28px 0;border-bottom:1px solid #222;transition:.3s}
+.svc div:hover{padding-left:24px;color:#fff;background:linear-gradient(90deg,#111,transparent)}.svc b{font:clamp(28px,4vw,56px) Anton;min-width:40%}.svc span{color:#777}
+.svc i{font-style:normal;color:#444;font-size:12px}
+footer{padding:80px 32px 40px;border-top:1px solid #222}footer h2{font-size:clamp(60px,14vw,220px);margin:0}
+.rv{opacity:0;transform:translateY(60px);transition:1s cubic-bezier(.2,.9,.2,1)}.rv.in{opacity:1;transform:none}
+@media(max-width:760px){.grid{grid-template-columns:1fr}nav ul{display:none}.svc div{flex-direction:column;gap:6px}.svc b{min-width:0}section{padding:80px 16px}.hero,nav{padding:16px}}
+</style></head><body>
+<div class="loader"><b>TH</b></div>
+<nav><a class="logo" href="#">TH</a><ul><li>EVENTS</li><li>ARTISTS</li><li>ABOUT</li><li>SERVICES</li><li>CONTACT</li></ul><a class="cta" href="#events">BUY TICKETS</a></nav>
+<header class="hero"><img class="th-bg" src="../img/7.jpg" style="opacity:.45"><div style="position:absolute;inset:0;background:linear-gradient(0deg,#000 8%,transparent 60%,rgba(0,0,0,.6))"></div><h1><span><i>BLACK</i></span><span><i>OUT.</i></span></h1>
+<div class="meta"><div>19 DEC 2026 · PRAGUE · LUCERNA MUSIC BAR</div><button onclick="openBooking('blackout-prague')">GET TICKETS →</button></div></header>
+<div class="marq"><div id="mq"></div></div>
+<section id="events"><h2>UPCOMING<br><em>EVENTS</em></h2><div class="grid" id="grid"></div></section>
+<section><div class="stats rv" id="stats"></div></section>
+<section><h2 class="rv">WHAT<br><em>WE DO</em></h2><div class="svc" id="svc"></div></section>
+<div id="more"></div>
+<footer><p style="letter-spacing:.2em;color:#777">KIẾN TẠO TRẢI NGHIỆM. KẾT NỐI CỘNG ĐỒNG.</p><h2>TH ENT.</h2>
+<p style="color:#555;font-size:12px">© 2026 TH Entertainment · <a href="https://www.facebook.com/thentertainment1988">Facebook</a> · CZ · DE · PL · UK · AT · SK · VN</p></footer>
+<script src="../shared/data.js"></script><script src="../shared/booking.js"></script><script src="../shared/sections.js"></script>
+<script>
+renderSections("#more");
+const t=" GIẢI TRÍ KHÔNG BIÊN GIỚI ✦ ENTERTAINMENT WITHOUT BORDERS ✦";mq.textContent=t.repeat(8);
+grid.innerHTML=TH.events.map(e=>`<div class="card rv" onclick="openBooking('${e.id}')"><img class="th-bg" src="${e.img}"><span class="st">${TH.statusLabel[e.status]}</span>
+<div><div class="d">${TH.fmtDate(e.date,{day:'2-digit',month:'short'})}</div><h3>${e.title}</h3><p>${e.sub.toUpperCase()}</p><p>${e.city.toUpperCase()} · ${e.venue}</p></div></div>`).join("");
+stats.innerHTML=TH.stats.map(s=>`<div><b data-n="${s.n}">0</b><span>${s.l.toUpperCase()}</span></div>`).join("");
+svc.innerHTML=TH.services.map((s,i)=>`<div class="rv"><i>0${i+1}</i><b>${s[0]}</b><span>${s[1]}</span></div>`).join("");
+observeReveal();
+new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();
+TH.stats.forEach((s,i)=>{const el=stats.children[i].querySelector('b');let k=0;const id=setInterval(()=>{k=Math.min(s.n,k+Math.ceil(s.n/40));el.textContent=k+s.s;if(k>=s.n)clearInterval(id)},30)})})).observe(stats);
+setupSound("../audio/01-monolith.mp3");
+</script><script src="../shared/polish.js"></script></body></html>

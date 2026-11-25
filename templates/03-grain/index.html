@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 fill=%27black%27/%3E%3Ctext x=%2710%27 y=%2770%27 fill=%27white%27 font-size=%2760%27%3ETH%3C/text%3E%3C/svg%3E"><title>TH Entertainment — Grain</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1c1c1c;--fg:#d9d9d9;--mut:#777;--line:#333;--card:#111;--disp:Oswald}
+*{box-sizing:border-box}body{margin:0;background:#1c1c1c;color:#d9d9d9;font-family:'Space Grotesk',sans-serif;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:90;opacity:.12;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:gr .4s steps(4) infinite}
+@keyframes gr{25%{transform:translate(-5%,3%)}50%{transform:translate(4%,-6%)}75%{transform:translate(-2%,5%)}}
+nav{position:fixed;inset:0 0 auto;display:flex;justify-content:space-between;padding:24px 32px;z-index:50;font-size:12px;letter-spacing:.25em}
+nav b{font:30px Oswald;letter-spacing:.1em}
+.split{display:grid;grid-template-columns:1fr 1fr;height:100vh}
+.split .a{background:linear-gradient(180deg,#2b2b2b,#0e0e0e);display:flex;flex-direction:column;justify-content:center;padding:48px}
+.split .b{background:#d9d9d9;color:#111;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:32px}
+.split h1{font:clamp(80px,12vw,200px)/.85 Oswald;margin:0}.split .a p{letter-spacing:.3em;font-size:12px;color:#888}
+.cd{display:flex;gap:18px;justify-content:center;margin:24px 0}.cd div{min-width:80px}.cd b{font:clamp(56px,7vw,110px)/1 Oswald;display:block}.cd span{font-size:10px;letter-spacing:.3em}
+.btn{background:#111;color:#d9d9d9;border:0;padding:16px 30px;letter-spacing:.25em;font:700 12px 'Space Grotesk';cursor:pointer}
+.btn:hover{background:#000;color:#fff}
+section{padding:120px 48px}.lbl{letter-spacing:.3em;font-size:12px;color:#777;margin-bottom:24px}
+.list .row{display:grid;grid-template-columns:160px 140px 1fr 200px 140px;gap:24px;align-items:center;padding:28px 0;border-top:1px solid #333;cursor:pointer;position:relative;transition:.3s}
+.list .row:hover{color:#fff;padding-left:16px}.list .row:last-child{border-bottom:1px solid #333}
+.list .row img{width:100%;aspect-ratio:16/10;object-fit:cover;filter:grayscale(1)}.list .row .t{font:clamp(36px,5vw,64px)/1 Oswald}.list .row .s{font-size:11px;letter-spacing:.2em;text-align:right}
+.list .row .s.sold-out{text-decoration:line-through;color:#555}
+.big{font:clamp(48px,7vw,110px)/.95 Oswald;max-width:1100px}.big span{color:#555}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:#333;margin-top:64px}
+.cols div{background:#1c1c1c;padding:32px;min-height:220px}.cols h4{font:30px Oswald;margin:24px 0 8px;letter-spacing:.05em}.cols p{color:#888;margin:0;line-height:1.5}
+footer{padding:64px 48px;border-top:1px solid #333;display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;font-size:12px;letter-spacing:.2em}
+.rv{opacity:0;filter:blur(10px);transition:1s}.rv.in{opacity:1;filter:none}
+@media(max-width:800px){.split{grid-template-columns:1fr;height:auto}.split>div{min-height:70vh}.list .row{grid-template-columns:1fr;gap:4px}.list .row .s{text-align:left}section{padding:80px 16px}.split .a{padding:96px 16px 32px}nav{padding:16px}}
+</style></head><body>
+<nav><b>TH ENT</b><span>EVENTS · ARTISTS · ABOUT · CONTACT</span></nav>
+<div class="split"><div class="a" style="position:relative;overflow:hidden"><img class="th-bg" src="../img/9.jpg" style="opacity:.4"><div style="position:relative"><p>NEXT EVENT — 31.12.2026 · BERLIN</p><h1>NEW<br>YEAR<br>NOIR</h1><p>COUNTDOWN 2027 · ARENA BERLIN</p></div></div>
+<div class="b"><div style="letter-spacing:.3em;font-size:12px">BẮT ĐẦU SAU</div><div class="cd" id="cd"></div><button class="btn" onclick="openBooking('nye-berlin')">ĐẶT VÉ NGAY</button></div></div>
+<section id="events"><div class="lbl">( 01 ) — SỰ KIỆN SẮP TỚI</div><div class="list" id="list"></div></section>
+<section><div class="lbl">( 02 ) — VỀ CHÚNG TÔI</div><p class="big rv">Hơn 15 năm kinh nghiệm. <span>Mạng lưới tại 7 quốc gia.</span> Kết nối nghệ sĩ, âm nhạc và cộng đồng <span>Việt Nam – châu Âu.</span></p>
+<div class="cols" id="cols"></div></section>
+<div id="more"></div>
+<footer><span>© TH ENTERTAINMENT 2026</span><span>GIẢI TRÍ KHÔNG BIÊN GIỚI</span><a style="color:inherit" href="https://www.facebook.com/thentertainment1988">FACEBOOK ↗</a></footer>
+<script src="../shared/data.js"></script><script src="../shared/booking.js"></script><script src="../shared/sections.js"></script>
+<script>
+renderSections("#more");
+list.innerHTML=TH.events.map(e=>`<div class="row rv" onclick="openBooking('${e.id}')"><img src="${e.img}"><div>${TH.fmtDate(e.date)}</div><div class="t">${e.title} <small style="font:14px 'Space Grotesk';color:#777">${e.sub}</small></div><div>${e.city}<br><small style="color:#777">${e.venue}</small></div><div class="s ${e.status}">${TH.statusLabel[e.status]}</div></div>`).join("");
+cols.innerHTML=TH.services.map((s,i)=>`<div class="rv"><small style="color:#555">0${i+1}</small><h4>${s[0]}</h4><p>${s[1]}</p></div>`).join("");
+const T=new Date(TH.events[1].date);function tick(){let d=Math.max(0,T-new Date());const u=[[864e5,'NGÀY'],[36e5,'GIỜ'],[6e4,'PHÚT'],[1e3,'GIÂY']];
+cd.innerHTML=u.map(([m,l])=>{const v=Math.floor(d/m);d-=v*m;return`<div><b>${String(v).padStart(2,'0')}</b><span>${l}</span></div>`}).join("")}tick();setInterval(tick,1000);
+observeReveal();setupSound("../audio/03-grain.mp3");
+</script><script src="../shared/polish.js"></script></body></html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 fill=%27black%27/%3E%3Ctext x=%2710%27 y=%2770%27 fill=%27white%27 font-size=%2760%27%3ETH%3C/text%3E%3C/svg%3E"><title>TH Entertainment — World Tour</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050505;--fg:#fff;--mut:#777;--line:#262626;--card:#111;--disp:Oswald}
+*{box-sizing:border-box}body{margin:0;background:#050505;color:#fff;font-family:Inter,sans-serif;overflow-x:hidden}
+nav{display:flex;justify-content:center;gap:40px;padding:22px;font:500 13px Oswald;letter-spacing:.3em;border-bottom:1px solid #1d1d1d;position:sticky;top:0;background:rgba(5,5,5,.85);backdrop-filter:blur(10px);z-index:20}
+.poster{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 16px;position:relative;overflow:hidden}
+.poster::before{content:"";position:absolute;width:140vmax;height:140vmax;background:conic-gradient(from 0deg,transparent,rgba(255,255,255,.08),transparent 30%);animation:spin 12s linear infinite}
+@keyframes spin{to{transform:rotate(1turn)}}
+.poster .pre{font:300 14px Oswald;letter-spacing:.8em;color:#999;position:relative}
+.poster h1{font:700 clamp(70px,15vw,240px)/.85 Oswald;margin:24px 0;letter-spacing:-.02em;position:relative;background:linear-gradient(180deg,#fff 40%,#555);-webkit-background-clip:text;color:transparent}
+.poster .yr{font:300 clamp(22px,3vw,40px) Oswald;letter-spacing:1em;position:relative}
+.poster .cities{margin-top:48px;font:500 13px Oswald;letter-spacing:.35em;color:#888;max-width:800px;line-height:2;position:relative}
+.sec{max-width:1100px;margin:0 auto;padding:96px 16px}.sec h2{font:700 48px Oswald;letter-spacing:.1em;text-align:center;margin:0 0 48px}
+.tour{border-top:1px solid #fff}
+.tr{display:grid;grid-template-columns:120px 1fr 1fr 160px;align-items:center;padding:22px 8px;border-bottom:1px solid #262626;transition:.25s}
+.tr:hover{background:#fff;color:#000}.tr .d{font:700 28px Oswald;line-height:1}.tr .d small{display:block;font:400 11px Inter;letter-spacing:.2em;color:#888}
+.tr .c{font:500 22px Oswald;letter-spacing:.1em}.tr .v{color:#999;font-size:14px}.tr:hover .v,.tr:hover .d small{color:#444}
+.tr button{border:1px solid currentColor;background:none;color:inherit;padding:12px 0;width:100%;font:500 12px Oswald;letter-spacing:.25em;cursor:pointer}
+.tr button.on-sale,.tr button.few-left{background:#fff;color:#000}.tr:hover button.on-sale,.tr:hover button.few-left{background:#000;color:#fff}
+.tr button.sold-out{opacity:.4}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.info div{border:1px solid #262626;padding:32px}
+.info h3{font:500 20px Oswald;letter-spacing:.15em;margin:0 0 12px}.info p{color:#999;line-height:1.6;margin:0;font-size:14px}
+.notice{border:1px solid #333;padding:32px;font-size:14px;line-height:1.8;color:#aaa}.notice b{color:#fff;font-family:Oswald;letter-spacing:.15em}
+.tour-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:0 4px}.tour-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:grayscale(1);transition:.4s}.tour-gallery img:hover{filter:none}
+footer{text-align:center;padding:64px 16px;color:#555;font:400 12px Oswald;letter-spacing:.3em;border-top:1px solid #1d1d1d}
+.rv{opacity:0;transform:translateX(-30px);transition:.7s}.rv.in{opacity:1;transform:none}
+@media(max-width:760px){nav{gap:16px;font-size:11px;letter-spacing:.15em;overflow-x:auto;justify-content:flex-start}.tr{grid-template-columns:80px 1fr;gap:8px}.tr .v{grid-column:2}.tr>div:last-child{grid-column:1/-1}.info{grid-template-columns:1fr}}
+</style></head><body>
+<nav><span>TOUR</span><span>TICKETS</span><span>ARTISTS</span><span>ABOUT</span><span>NOTICE</span></nav>
+<header class="poster"><img class="th-bg" src="../img/10.jpg" style="opacity:.35"><div style="position:absolute;inset:0;background:radial-gradient(circle,transparent,#050505 75%)"></div><div class="pre">TH ENTERTAINMENT PRESENTS</div><h1>BORDERLESS</h1><div class="yr">2026–2027</div>
+<div class="cities" id="cities"></div></header>
+<section class="sec" id="events"><h2>TOUR SCHEDULE</h2><div class="tour" id="tour"></div></section>
+<div class="tour-gallery"><img src="../img/1.jpg"><img src="../img/2.jpg"><img src="../img/3.jpg"><img src="../img/4.jpg"><img src="../img/5.jpg"><img src="../img/6.jpg"></div><section class="sec" id="tickets"><h2>TICKET INFO</h2><div class="info">
+<div class="rv"><h3>GENERAL ADMISSION</h3><p>Vé đứng khu vực sân khấu chính. Mở cửa trước 60 phút.</p></div>
+<div class="rv"><h3>VIP</h3><p>Lối vào riêng, quầy bar riêng, merchandise độc quyền.</p></div>
+<div class="rv"><h3>VVIP TABLE</h3><p>Bàn riêng cho nhóm, bottle service, view sân khấu tốt nhất.</p></div></div></section>
+<section class="sec" id="notice"><div class="notice"><b>NOTICE</b><br>· Mỗi tài khoản mua tối đa 4 vé GA / 2 vé VIP mỗi đêm.<br>· Presale dành cho thành viên đăng ký newsletter, mở trước 48h.<br>· Vé điện tử (QR) gửi qua email, xuất trình kèm giấy tờ tùy thân.<br>· Mọi vé bán lại ngoài kênh chính thức không được đảm bảo.</div></section>
+<div id="more"></div>
+<footer>TH ENTERTAINMENT · GIẢI TRÍ KHÔNG BIÊN GIỚI · © 2026</footer>
+<script src="../shared/data.js"></script><script src="../shared/booking.js"></script><script src="../shared/sections.js"></script>
+<script>
+renderSections("#more");
+cities.textContent=TH.events.map(e=>e.city.toUpperCase()).join(" · ");
+tour.innerHTML=TH.events.map(e=>{const d=new Date(e.date);return`<div class="tr rv"><div class="d">${d.toLocaleDateString('en-GB',{day:'2-digit',month:'2-digit'})}<small>${d.getFullYear()} · ${d.toLocaleDateString('en-GB',{weekday:'short'}).toUpperCase()}</small></div>
+<div class="c">${e.city.toUpperCase()}, ${e.country}</div><div class="v">${e.venue}<br>${e.title} — ${e.sub}</div>
+<div><button class="${e.status}" onclick="openBooking('${e.id}')">${e.status==='on-sale'||e.status==='few-left'?'TICKETS':TH.statusLabel[e.status]}</button></div></div>`}).join("");
+observeReveal();setupSound("../audio/04-world-tour.mp3");
+</script><script src="../shared/polish.js"></script></body></html>

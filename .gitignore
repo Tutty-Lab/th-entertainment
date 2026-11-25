@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+node_modules/
+.playwright-cli/
+output/
+mockups/
+docs/CLAUDE-SESSION.md
+docs/CODEX-HANDOFF.md
+mockups$*
+public/
