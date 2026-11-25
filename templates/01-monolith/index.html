@@ -41,7 +41,7 @@ footer{padding:80px 32px 40px;border-top:1px solid #222}footer h2{font-size:clam
 <div class="loader"><b>TH</b></div>
 <nav><a class="logo" href="#">TH</a><ul><li>EVENTS</li><li>ARTISTS</li><li>ABOUT</li><li>SERVICES</li><li>CONTACT</li></ul><a class="cta" href="#events">BUY TICKETS</a></nav>
 <header class="hero"><img class="th-bg" src="../img/7.jpg" style="opacity:.45"><div style="position:absolute;inset:0;background:linear-gradient(0deg,#000 8%,transparent 60%,rgba(0,0,0,.6))"></div><h1><span><i>BLACK</i></span><span><i>OUT.</i></span></h1>
-<div class="meta"><div>19 DEC 2026 · PRAGUE · LUCERNA MUSIC BAR</div><button onclick="openBooking('blackout-prague')">GET TICKETS →</button></div></header>
+<div class="meta"><div>19 DEC 2026 · PRAGUE · LUCERNA MUSIC BAR</div><button onclick="openBooking('blackout-prague')">GET TICKETS</button></div></header>
 <div class="marq"><div id="mq"></div></div>
 <section id="events"><h2>UPCOMING<br><em>EVENTS</em></h2><div class="grid" id="grid"></div></section>
 <section><div class="stats rv" id="stats"></div></section>
@@ -61,4 +61,4 @@ observeReveal();
 new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();
 TH.stats.forEach((s,i)=>{const el=stats.children[i].querySelector('b');let k=0;const id=setInterval(()=>{k=Math.min(s.n,k+Math.ceil(s.n/40));el.textContent=k+s.s;if(k>=s.n)clearInterval(id)},30)})})).observe(stats);
 setupSound("../audio/01-monolith.mp3");
-</script><script src="../shared/polish.js"></script></body></html>
+</script><script src="../shared/editorial.js"></script><script src="../shared/polish.js"></script></body></html>

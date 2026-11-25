@@ -6,7 +6,7 @@
   style.rel = 'stylesheet'; style.href = '../shared/polish.css'; document.head.append(style);
   const nav = document.querySelector('nav');
   const links = [['events','SỰ KIỆN'],['artists','NGHỆ SĨ'],['about','GIỚI THIỆU'],['contact','LIÊN HỆ']];
-  nav.innerHTML = `<a class="brand" href="#top" aria-label="TH Entertainment — đầu trang">TH<span>ENTERTAINMENT</span></a><div class="nav-links">${links.map(([id,label])=>`<a href="#${id}">${label}</a>`).join('')}</div><a class="nav-ticket" href="#events">KHÁM PHÁ ↗</a>`;
+  nav.innerHTML = `<a class="brand" href="#top" aria-label="TH Entertainment — đầu trang">TH<span>ENTERTAINMENT</span></a><div class="nav-links">${links.map(([id,label])=>`<a href="#${id}">${label}</a>`).join('')}</div>`;
   document.body.id = 'top';
   const progress = document.createElement('div'); progress.className='reading-progress'; progress.setAttribute('aria-hidden','true'); document.body.append(progress);
   let scheduled = false;
@@ -30,9 +30,6 @@
     card.tabIndex=0;card.setAttribute('role','button');
     card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();card.click()}});
   });
-  // Make demo status visible before any ticket or contact action.
-  const demo = document.createElement('p');demo.className='demo-note';demo.textContent='Bản xem trước thiết kế · Sự kiện, nghệ sĩ và thông tin vé là nội dung minh họa.';
-  document.querySelector('#events').prepend(demo);
   document.querySelectorAll('.stats b').forEach((el,i)=>{if(i>1){el.removeAttribute('data-n');el.textContent='—'}});
   // Existing counter runs briefly; remove unverified metrics entirely.
   const stats = document.querySelector('.stats');if(stats) [...stats.children].slice(2).forEach(el=>el.style.display='none');
@@ -49,7 +46,7 @@
     };
   });
   const contact = document.querySelector('.ct dl');
-  if(contact)contact.innerHTML='<dt>KẾT NỐI CHÍNH THỨC</dt><dd><a href="https://www.facebook.com/thentertainment1988" target="_blank" rel="noopener noreferrer">TH Entertainment trên Facebook ↗</a></dd><dt>HỢP TÁC QUỐC TẾ</dt><dd>Châu Âu · Việt Nam</dd>';
+  if(contact)contact.innerHTML='<dt>KẾT NỐI CHÍNH THỨC</dt><dd><a href="https://www.facebook.com/thentertainment1988" target="_blank" rel="noopener noreferrer">TH Entertainment trên Facebook</a></dd><dt>HỢP TÁC QUỐC TẾ</dt><dd>Châu Âu · Việt Nam</dd>';
   document.querySelectorAll('.faq p').forEach((el,i)=>{if(i===0)el.textContent='Giao diện mô phỏng chọn hạng vé và số lượng. Bán vé sẽ mở khi có thông báo chính thức.';if(i===1)el.textContent='Chính sách hoàn và đổi vé sẽ được công bố riêng cho từng sự kiện.';if(i===3)el.textContent='Kết nối TH Entertainment qua Facebook chính thức để trao đổi về hợp tác.'});
   // Accessible modal lifecycle, including dynamically replaced content.
   const back=document.querySelector('.thb-back');let trigger=null;

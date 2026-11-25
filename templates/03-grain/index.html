@@ -36,7 +36,7 @@ footer{padding:64px 48px;border-top:1px solid #333;display:flex;justify-content:
 <section><div class="lbl">( 02 ) — VỀ CHÚNG TÔI</div><p class="big rv">Hơn 15 năm kinh nghiệm. <span>Mạng lưới tại 7 quốc gia.</span> Kết nối nghệ sĩ, âm nhạc và cộng đồng <span>Việt Nam – châu Âu.</span></p>
 <div class="cols" id="cols"></div></section>
 <div id="more"></div>
-<footer><span>© TH ENTERTAINMENT 2026</span><span>GIẢI TRÍ KHÔNG BIÊN GIỚI</span><a style="color:inherit" href="https://www.facebook.com/thentertainment1988">FACEBOOK ↗</a></footer>
+<footer><span>© TH ENTERTAINMENT 2026</span><span>GIẢI TRÍ KHÔNG BIÊN GIỚI</span><a style="color:inherit" href="https://www.facebook.com/thentertainment1988">FACEBOOK</a></footer>
 <script src="../shared/data.js"></script><script src="../shared/booking.js"></script><script src="../shared/sections.js"></script>
 <script>
 renderSections("#more");
@@ -45,4 +45,4 @@ cols.innerHTML=TH.services.map((s,i)=>`<div class="rv"><small style="color:#555"
 const T=new Date(TH.events[1].date);function tick(){let d=Math.max(0,T-new Date());const u=[[864e5,'NGÀY'],[36e5,'GIỜ'],[6e4,'PHÚT'],[1e3,'GIÂY']];
 cd.innerHTML=u.map(([m,l])=>{const v=Math.floor(d/m);d-=v*m;return`<div><b>${String(v).padStart(2,'0')}</b><span>${l}</span></div>`}).join("")}tick();setInterval(tick,1000);
 observeReveal();setupSound("../audio/03-grain.mp3");
-</script><script src="../shared/polish.js"></script></body></html>
+</script><script src="../shared/editorial.js"></script><script src="../shared/polish.js"></script></body></html>

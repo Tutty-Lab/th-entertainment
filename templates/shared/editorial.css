@@ -1,0 +1,43 @@
+/* Photography carries the page; type provides a short, deliberate beat. */
+.service-visual{overflow:hidden}
+.service-photo,.story-image,.process-photo,.faq-photo,.contact-photo{position:relative;overflow:hidden;background:#202020}
+.service-photo img,.story-image img,.process-photo img,.faq-photo img,.contact-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1);transition:transform 1s cubic-bezier(.2,.8,.2,1),filter .8s}
+.service-visual:hover img,.strength-story:hover img{transform:scale(1.055);filter:grayscale(.25)}
+.svc .service-visual{display:grid;grid-template-columns:140px 30px minmax(0,1fr) minmax(180px,.8fr);gap:24px;align-items:center;padding:18px 0}
+.svc .service-photo{height:100px;display:block;padding:0;border:0}
+.svc .service-visual:hover{padding-left:0}.svc .service-visual b{min-width:0;font-size:clamp(24px,3vw,44px)}
+.cols .service-visual{padding:0 0 24px;min-height:0}.cols .service-photo{height:190px;padding:0;margin:0 0 20px}
+.cols .service-visual>small,.cols .service-visual>h4,.cols .service-visual>p{margin-left:24px;margin-right:24px}.cols .service-visual>h4{margin-top:12px}
+.strength-stories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.strength-story{position:relative;background:#141414;min-width:0}
+.story-image{aspect-ratio:5/4}.story-copy{padding:28px}.story-index{font:500 13px Oswald;letter-spacing:.2em;color:#aaa}
+.story-copy h3{font:500 clamp(28px,3vw,46px)/1.2 Oswald;margin:14px 0 24px;color:#eee}
+.story-copy ul{padding:0;list-style:none;margin:0;color:#bbb;font-size:14px;line-height:1.8}.story-copy li{padding:14px 0;border-top:1px solid #ffffff20}
+.proc{gap:20px}.proc>div{border-top:0;padding-top:0}.process-photo{aspect-ratio:4/3;margin-bottom:24px}.proc>div>b{font-size:40px}.proc h4{margin-top:10px}
+#vision.vision-scene{position:relative;min-height:680px;padding:100px 8%;display:flex;align-items:center;overflow:hidden;background:#111}
+#vision .two{display:block;max-width:900px;position:static}
+#vision .ph{position:absolute;inset:-70px 0;aspect-ratio:auto;opacity:1;transform:none!important;filter:none!important}
+#vision .ph img{height:100%;transform:translateY(var(--drift,0px)) scale(1.12);filter:grayscale(1) brightness(.5)}
+#vision .ph:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#000c,#0006)}
+#vision .two>div:last-child{position:relative;z-index:1}#vision .quote{font-size:clamp(30px,4.2vw,64px);line-height:1.35;max-width:950px;color:white}#vision .lead{max-width:700px;color:#ddd;font-size:16px}
+.network-canvas{position:relative;height:390px;overflow:hidden;background:#151515;margin:32px 0 0;color:#eee}
+.network-photo{position:absolute;inset:-50px 0;width:100%;height:calc(100% + 100px);object-fit:cover;filter:grayscale(1) brightness(.22);transform:translateY(var(--drift,0px))}
+.network-canvas svg{position:relative;display:block;width:100%;height:100%;padding:16px}.network-canvas text{font:12px 'Be Vietnam Pro',sans-serif;letter-spacing:.08em}.network-routes{stroke-width:1;opacity:.65;stroke-dasharray:600;animation:route-travel 12s linear infinite}
+.network-caption{position:absolute;bottom:20px;left:28px;font-size:10px;letter-spacing:.25em;color:#aaa}@keyframes route-travel{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}
+#network .net{border-top:0}#network .net>div{min-height:130px;padding:20px}#network .net b{font-size:38px}#network .net i{width:5px;height:5px}
+.visual-interlude{height:75svh;min-height:420px;max-height:780px;padding:0!important;position:relative;overflow:hidden}
+.interlude-image{position:absolute;inset:-65px 0}.interlude-image img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.6);transform:translateY(var(--drift,0px)) scale(1.08)}
+.interlude-image:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#0009,transparent 70%)}
+.interlude-copy{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;padding:60px 6%;color:#fff}
+.interlude-copy p{font:600 clamp(70px,12vw,180px)/.95 Oswald;margin:32px 0;letter-spacing:-.04em}.interlude-copy>span{font:400 10px 'Be Vietnam Pro';letter-spacing:.3em}
+.culture-scene .ph img{transform:translateY(var(--drift,0px)) scale(1.14)}.culture-scene .ph{max-height:680px}.culture-scene .quote{font-size:clamp(24px,2.8vw,40px)}
+.faq-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}.faq-photo{height:420px}.faq-content details:first-child{padding-top:0}.faq-content summary{gap:20px}.contact-photo{height:210px;margin-top:32px}
+body[data-concept=grain] .strength-story{background:#d6d3cb;color:#151515}body[data-concept=grain] .story-copy h3{color:#151515}body[data-concept=grain] .story-copy ul,body[data-concept=grain] .story-index{color:#444}body[data-concept=grain] .story-copy li{border-color:#0003}
+body[data-concept=grain] .visual-interlude{margin:0 32px;height:65svh}body[data-concept=grain] .interlude-copy{align-items:flex-end;text-align:right}body[data-concept=grain] .strength-story:nth-child(2){transform:translateY(32px)}
+body[data-concept=tour] .interlude-copy{align-items:center;text-align:center}body[data-concept=tour] .interlude-copy p{font-weight:500;letter-spacing:.06em}body[data-concept=tour] .strength-stories{gap:2px}body[data-concept=tour] .story-copy{text-align:center}body[data-concept=tour] .story-image{aspect-ratio:1}
+@media(max-width:1000px){.svc .service-visual{grid-template-columns:110px 24px 1fr}.svc .service-visual>span{grid-column:3}.svc .service-photo{grid-row:span 2;height:110px}.strength-stories{gap:12px}.story-copy{padding:20px}.story-copy ul{font-size:12px}.faq-layout{gap:32px}.proc{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:760px){.strength-stories{grid-template-columns:1fr;gap:24px}.strength-story{display:grid;grid-template-columns:.8fr 1fr;align-items:stretch}.story-image{aspect-ratio:auto;min-height:260px}.story-copy{padding:20px 16px}.story-copy h3{font-size:26px;margin:10px 0 16px}.story-copy li{padding:10px 0}.story-copy ul{font-size:12px}.svc .service-visual{grid-template-columns:90px 1fr;gap:12px;padding:18px 0}.svc .service-visual>i{display:none}.svc .service-visual>b{grid-column:2;font-size:26px}.svc .service-visual>span{grid-column:2;font-size:12px;line-height:1.6}.svc .service-photo{height:100%;min-height:100px;grid-row:span 2}.cols .service-photo{height:210px}.proc{gap:28px 16px}.proc p{font-size:13px}.proc h4{font-size:24px}.process-photo{aspect-ratio:1;margin-bottom:16px}.proc>div>b{font-size:30px}#vision.vision-scene{min-height:640px;padding:64px 24px}#vision .quote{font-size:30px}#vision .lead{font-size:14px;line-height:1.8}.network-canvas{height:260px}.network-canvas svg{padding:0;min-width:420px;position:absolute;left:50%;transform:translateX(-50%)}.network-caption{font-size:8px;left:16px;bottom:14px}#network .net{grid-template-columns:repeat(2,minmax(0,1fr))}#network .net>div{min-height:100px;padding:16px}.visual-interlude{height:65svh;min-height:420px}body[data-concept=grain] .visual-interlude{margin:0 16px}.interlude-copy{padding:40px 24px}.interlude-copy p{font-size:24vw}.interlude-copy>span{font-size:8px;letter-spacing:.18em}.faq-layout{grid-template-columns:1fr;gap:32px}.faq-photo{height:220px}.faq-content summary{font-size:22px}.contact-photo{height:180px}body[data-concept=grain] .strength-story:nth-child(2){transform:none}.culture-scene .ph{aspect-ratio:4/3}}
+@media(prefers-reduced-motion:reduce){.network-routes{animation:none}.interlude-image img,#vision .ph img,.culture-scene .ph img,.network-photo{transform:none!important}}
+@media(prefers-reduced-motion:no-preference){.visual-interlude .interlude-image{clip-path:inset(0 6%);transition:clip-path 1.4s cubic-bezier(.2,.8,.2,1)}.visual-interlude.scene-visible .interlude-image{clip-path:inset(0)}.strength-story .story-image img,.proc .process-photo img{transform:scale(1.12);transition:transform 1.5s cubic-bezier(.2,.8,.2,1),filter .8s}.strength-story.in .story-image img,.proc .in .process-photo img{transform:scale(1)}.strength-story.in:hover .story-image img{transform:scale(1.055)}}
+.strength-story>*{min-width:0}.story-image img{position:absolute;inset:0}.story-copy{overflow-wrap:anywhere}
+@media(max-width:760px){.strength-story{grid-template-columns:minmax(0,.8fr) minmax(0,1fr)}body[data-concept=tour] .story-image{aspect-ratio:auto}}
