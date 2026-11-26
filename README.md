@@ -23,3 +23,7 @@ Motion includes Monolith title reveals, Grain blur reveals and analog grain, Wor
 ## After approval
 
 Retain the approved template, move its contents to the site root, adjust relative shared asset paths, remove the switcher and unused concepts. Connect approved content, CMS and ticket checkout in the next phase.
+
+## Color direction
+
+All three concepts use vermilion `#EF4023`, inspired by the YG Audition reference, with warm paper and charcoal. Brighter red text `#FF785E` is used on dark surfaces, dark labels on red buttons, and dark red on paper. Concert photography retains color; Monolith has a red marquee, Grain a red countdown panel, World Tour red dates and ticket accents. Shared rules live in `templates/shared/color.css`.

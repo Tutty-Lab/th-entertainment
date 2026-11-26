@@ -1,0 +1,74 @@
+/* Vermilion, warm paper and charcoal — inspired by YG Audition's red accent. */
+:root{--accent:#ef4023;--accent-text:#ff785e;--paper:#f3f0e9;--ink:#161616}
+::selection{background:var(--accent);color:#111}
+:focus-visible{outline-color:var(--accent-text)!important}
+.reading-progress{background:var(--accent)}
+.brand::after{content:'';width:7px;height:7px;background:var(--accent);border-radius:50%;align-self:flex-end;margin-bottom:3px}
+.nav-links a:after{background:var(--accent);height:2px}
+.nav-links a:hover{color:var(--accent-text)}
+.ms .k{color:var(--accent-text)}
+.ms h2.t em{color:var(--accent-text)}
+.story-index,.proc>div>b,.cols .service-visual>small{color:var(--accent-text)}
+.story-copy h3{color:#fff}
+.strength-story{border-top:3px solid var(--accent)}
+.net i,#network .net i{background:var(--accent)}
+.network-routes{stroke:var(--accent-text);opacity:1;stroke-width:1.5}
+.network-canvas svg>g:last-child{color:var(--accent-text)}
+.network-caption{color:#ddd}
+.network-photo{filter:grayscale(.2) brightness(.38)}
+.ph img,.service-photo img,.story-image img,.process-photo img,.faq-photo img,.contact-photo img,.list .row img,.tour-gallery img{filter:grayscale(.15) saturate(.9) contrast(1.03)}
+.ph:hover img,.service-visual:hover img,.strength-story:hover img,.tour-gallery img:hover{filter:grayscale(0) saturate(1.1)}
+.th-bg{filter:grayscale(.15) saturate(.95) contrast(1.03)}
+.hero>img.th-bg,.split .a>img.th-bg,.poster>img.th-bg{opacity:.68!important}
+.card .th-bg{opacity:.6}
+#vision .ph img{filter:grayscale(.15) brightness(.7)}
+#vision .ph:after{background:linear-gradient(90deg,#000b,#0004)}
+.interlude-image img{filter:grayscale(.1) brightness(.8)}
+.interlude-copy>span:first-child{color:var(--accent-text)}
+.interlude-copy p:after{content:'';display:inline-block;width:.12em;height:.12em;margin-left:.06em;background:var(--accent)}
+.news{background:var(--accent);color:var(--ink);--fg:var(--accent);--bg:var(--ink)}
+.news input::placeholder{color:#29201e}
+.news button{background:var(--ink);color:#fff}
+.ct button,.hero .meta button,.btn,.tr button.on-sale,.tr button.few-left{background:var(--accent);color:#111;border-color:var(--accent);transition:background .3s,color .3s,transform .3s}
+.ct button:hover,.hero .meta button:hover,.btn:hover{background:var(--paper);color:var(--ink);transform:translateY(-2px)}
+.tr:hover button.on-sale,.tr:hover button.few-left{background:var(--accent);color:#111}
+.card .st{background:#151515df;color:#fff;border-color:#ffffff50}
+.card .st:before{content:'';display:inline-block;width:6px;height:6px;background:var(--accent-text);border-radius:50%;margin-right:8px}
+.list .s.on-sale,.list .s.few-left{color:var(--accent-text)}
+.faq summary:after{color:var(--accent-text)}
+.faq details[open]{border-bottom-color:var(--accent)}
+.thb .go:not(:disabled){background:var(--accent);color:#111}
+.thb .q button:hover{background:var(--accent);color:#111;border-color:var(--accent)}
+.thb-sound[aria-pressed=true]{border-color:var(--accent-text);color:var(--accent-text)}
+
+/* A bright editorial pause between the photographic scenes. */
+#about.ms,body[data-concept=tour] #about.ms{background:var(--paper);color:var(--ink);--fg:var(--ink);--mut:#59534f;--line:#d8d2c9}
+#about.ms .k{color:#b62713}
+#about.ms h2.t em{color:#b62713}
+#about.ms p.lead{color:#292522;opacity:1}
+#about .ph{border-bottom:6px solid var(--accent)}
+
+/* 01 — red marquee and outlined headline, keeping the monumental composition. */
+body[data-concept=monolith] .marq{background:var(--accent);color:#111;border:0}
+body[data-concept=monolith] .hero h1 span:nth-child(2) i{-webkit-text-stroke-color:var(--accent-text)}
+body[data-concept=monolith] .stats b{color:var(--accent-text)}
+body[data-concept=monolith] .svc .service-visual:hover{background:#211310}
+
+/* 03 — a bold red countdown panel against warm paper image stories. */
+body[data-concept=grain] .split .b{background:var(--accent);color:var(--ink)}
+body[data-concept=grain] .split .b .btn{background:var(--ink);color:#fff}
+body[data-concept=grain] .split .b .btn:hover{background:var(--paper);color:var(--ink)}
+body[data-concept=grain] .story-copy h3{color:#b62713}
+body[data-concept=grain] .story-index{color:#a92110}
+body[data-concept=grain] .strength-story{background:var(--paper)}
+
+/* 04 — touring poster with a red date and strong ticket hierarchy. */
+body[data-concept=tour] .poster h1{background:none;color:var(--paper);-webkit-text-fill-color:var(--paper)}
+body[data-concept=tour] .poster .yr{color:var(--accent-text)}
+body[data-concept=tour] .poster .pre{color:#eee}
+body[data-concept=tour] .poster .cities{color:#ddd}
+body[data-concept=tour] .tour{border-top:3px solid var(--accent)}
+body[data-concept=tour] .info>div{border-top:3px solid var(--accent);background:#191411}
+body[data-concept=tour] .info h3{color:var(--accent-text)}
+body[data-concept=tour] .poster::before{background:conic-gradient(from 0deg,transparent,#ef402326,transparent 30%)}
+@media(prefers-reduced-motion:reduce){.ct button:hover,.hero .meta button:hover,.btn:hover{transform:none}}

@@ -4,6 +4,8 @@
   document.body.dataset.concept = concept;
   const style = document.createElement('link');
   style.rel = 'stylesheet'; style.href = '../shared/polish.css'; document.head.append(style);
+  const color = document.createElement('link');
+  color.rel = 'stylesheet'; color.href = '../shared/color.css'; document.head.append(color);
   const nav = document.querySelector('nav');
   const links = [['events','SỰ KIỆN'],['artists','NGHỆ SĨ'],['about','GIỚI THIỆU'],['contact','LIÊN HỆ']];
   nav.innerHTML = `<a class="brand" href="#top" aria-label="TH Entertainment — đầu trang">TH<span>ENTERTAINMENT</span></a><div class="nav-links">${links.map(([id,label])=>`<a href="#${id}">${label}</a>`).join('')}</div>`;
