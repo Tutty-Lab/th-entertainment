@@ -48,4 +48,4 @@ tour.innerHTML=TH.events.map(e=>{const d=new Date(e.date);return`<div class="tr 
 <div class="c">${e.city.toUpperCase()}, ${e.country}</div><div class="v">${e.venue}<br>${e.title} — ${e.sub}</div>
 <div><button class="${e.status}" onclick="openBooking('${e.id}')">${e.status==='on-sale'||e.status==='few-left'?'TICKETS':TH.statusLabel[e.status]}</button></div></div>`}).join("");
 observeReveal();setupSound("../audio/04-world-tour.mp3");
-</script><script src="../shared/editorial.js"></script><script src="../shared/polish.js"></script></body></html>
+</script><script src="../shared/editorial.js"></script><script src="../shared/polish.js"></script><script src="../../preview.js"></script></body></html>

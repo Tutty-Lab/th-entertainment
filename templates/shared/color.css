@@ -108,3 +108,9 @@ body[data-concept=tour] .tour .tr .d{color:var(--accent-text)}
 body[data-concept=tour] .tour .tr:hover .d{color:var(--accent-deep)}
 @media(max-width:760px){body[data-concept=monolith] .hero .meta{padding-bottom:42px}.culture-scene .quote{padding-left:16px}body[data-concept=tour] .poster .yr{padding:10px 14px 10px 24px}}
 @media(prefers-reduced-motion:reduce){.ct button:hover,.hero .meta button:hover,.btn:hover{transform:none}}
+
+/* Keep the cleaned-up service rows aligned after removing their index column. */
+.svc .service-visual{grid-template-columns:140px minmax(0,1fr) minmax(180px,.8fr)}
+.interlude-copy p:after{display:none}
+@media(max-width:1000px){.svc .service-visual{grid-template-columns:110px minmax(0,1fr)}.svc .service-visual>span{grid-column:2}}
+@media(max-width:760px){.svc .service-visual{grid-template-columns:90px minmax(0,1fr)}}

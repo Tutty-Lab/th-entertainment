@@ -31,12 +31,7 @@
   // Preserve the profile, but give the vision its own photographic scene.
   document.querySelector('#vision')?.classList.add('vision-scene');
   document.querySelector('#culture')?.classList.add('culture-scene');
-  const network = document.querySelector('#network');
-  if (network) {
-    const map = `<svg viewBox="0 0 1000 380" role="img" aria-label="Kết nối châu Âu và Việt Nam"><defs><radialGradient id="network-glow"><stop stop-color="#aaa" stop-opacity=".18"/><stop offset="1" stop-color="#aaa" stop-opacity="0"/></radialGradient></defs><ellipse cx="500" cy="190" rx="470" ry="180" fill="url(#network-glow)"/><g class="network-grid" fill="none" stroke="currentColor" opacity=".16"><ellipse cx="500" cy="190" rx="440" ry="160"/><ellipse cx="500" cy="190" rx="300" ry="160"/><ellipse cx="500" cy="190" rx="140" ry="160"/><path d="M60 190H940M105 120H895M105 260H895"/></g><g class="network-routes" fill="none" stroke="currentColor"><path d="M300 165Q520 -40 800 260"/><path d="M280 190Q490 30 800 260"/><path d="M350 175Q580 100 800 260"/><path d="M300 165Q250 95 245 130"/><path d="M300 165L325 145L350 175L330 205L300 165L280 190"/></g><g fill="currentColor">${[[245,130,'UK'],[300,165,'DE'],[325,145,'PL'],[350,175,'CZ'],[330,205,'SK'],[280,190,'AT'],[800,260,'VN']].map(([x,y,label])=>`<circle cx="${x}" cy="${y}" r="4"/><text x="${x+12}" y="${y-10}">${label}</text>`).join('')}</g></svg>`;
-    network.querySelector('.net').insertAdjacentHTML('beforebegin', `<div class="network-canvas rv">${picture('live','network-photo')}${map}<span class="network-caption">EUROPE / VIETNAM</span></div>`);
-    network.querySelector('.lead').textContent = 'Năng lực sản xuất tại châu Âu. Nguồn lực sáng tạo từ Việt Nam. Cùng hiện thực hóa những sân khấu xuyên biên giới.';
-  }
+  document.querySelector('#network .lead')?.replaceChildren(document.createTextNode('Năng lực sản xuất tại châu Âu. Nguồn lực sáng tạo từ Việt Nam. Cùng hiện thực hóa những sân khấu xuyên biên giới.'));
 
   const gallery = document.querySelector('#gallery');
   if (gallery) {
@@ -51,6 +46,16 @@
     layout.innerHTML=`<div class="faq-photo rv">${picture('crowd')}</div>`;
     layout.append(content);faq.append(layout);
   }
+
+  ['#strengths','#artists','#process'].forEach(selector => {
+    const section = document.querySelector(selector);
+    if (!section) return;
+    section.querySelector('.k')?.remove();
+  });
+  document.querySelectorAll('.story-index,.proc > div > b').forEach(element => element.remove());
+  document.querySelectorAll('.ms h2.t,.story-copy h3,.faq summary').forEach(element => {
+    element.childNodes.forEach(node => { if (node.nodeType === Node.TEXT_NODE) node.textContent = node.textContent.replace(/[.]\s*$/, ''); });
+  });
 
   const aboutCopy=document.querySelectorAll('#about .lead');
   if(aboutCopy[0])aboutCopy[0].textContent='Hơn 15 năm kiến tạo concert, festival và trải nghiệm giải trí quốc tế. TH Entertainment kết nối nghệ sĩ, khán giả và đối tác từ châu Âu đến Việt Nam.';

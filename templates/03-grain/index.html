@@ -45,4 +45,4 @@ cols.innerHTML=TH.services.map((s,i)=>`<div class="rv"><small style="color:#555"
 const T=new Date(TH.events[1].date);function tick(){let d=Math.max(0,T-new Date());const u=[[864e5,'NGÀY'],[36e5,'GIỜ'],[6e4,'PHÚT'],[1e3,'GIÂY']];
 cd.innerHTML=u.map(([m,l])=>{const v=Math.floor(d/m);d-=v*m;return`<div><b>${String(v).padStart(2,'0')}</b><span>${l}</span></div>`}).join("")}tick();setInterval(tick,1000);
 observeReveal();setupSound("../audio/03-grain.mp3");
-</script><script src="../shared/editorial.js"></script><script src="../shared/polish.js"></script></body></html>
+</script><script src="../shared/editorial.js"></script><script src="../shared/polish.js"></script><script src="../../preview.js"></script></body></html>

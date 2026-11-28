@@ -61,4 +61,4 @@ observeReveal();
 new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();
 TH.stats.forEach((s,i)=>{const el=stats.children[i].querySelector('b');let k=0;const id=setInterval(()=>{k=Math.min(s.n,k+Math.ceil(s.n/40));el.textContent=k+s.s;if(k>=s.n)clearInterval(id)},30)})})).observe(stats);
 setupSound("../audio/01-monolith.mp3");
-</script><script src="../shared/editorial.js"></script><script src="../shared/polish.js"></script></body></html>
+</script><script src="../shared/editorial.js"></script><script src="../shared/polish.js"></script><script src="../../preview.js"></script></body></html>

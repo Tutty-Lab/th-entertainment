@@ -1,6 +1,6 @@
 # TH Entertainment — design preview
 
-Three standalone HTML landing pages: **01 Monolith**, **03 Grain**, **04 World Tour**. The persistent switcher at `/` previews each design. URL query `?design=grain` (or `monolith`, `world-tour`) opens a shareable selection; browser Back restores the prior design.
+Three standalone HTML landing pages: **01 Monolith**, **03 Grain**, **04 World Tour**. The liquid-glass switcher floats at the bottom of each standalone design. The root URL redirects `?design=grain` (or `monolith`, `world-tour`) to its template route; browser Back restores the prior design. Pages render directly without an iframe so browser element selection can access their DOM. On mobile the sound button sits above the dock, and opening the ticket dialog hides the dock.
 
 ## Vercel
 
@@ -14,7 +14,7 @@ Run `npm run build`, then `python -m http.server 4173 --directory public`. Open 
 
 Events, artist names, ticket prices and photos are illustrative. Ticket and contact interactions are UI demos; no purchases, submissions or email storage. The official Facebook link is supplied by the client. Images are inherited Unsplash illustrations; replace with approved TH assets before production. Fonts load from Google Fonts.
 
-Motion includes Monolith title reveals, Grain blur reveals and analog grain, World Tour poster lighting, staggered content, image hover, desktop pointer movement, progress and smooth anchors. Visual sections add scroll parallax, a photographic vision scene, image-led capabilities and process, a full-width concert interlude and an animated Europe–Vietnam connection diagram. Six additional Unsplash concert photos are stored locally. `prefers-reduced-motion` disables animation. Sound starts only after the visitor presses SOUND; switching designs unloads the prior audio.
+Motion includes Monolith title reveals, Grain blur reveals and analog grain, World Tour poster lighting, staggered content, image hover, desktop pointer movement, progress and smooth anchors. Visual sections add scroll parallax, a photographic vision scene, image-led capabilities and process, a full-width concert interlude and a simple international country list. Six additional Unsplash concert photos are stored locally. `prefers-reduced-motion` disables animation. Sound starts only after the visitor presses SOUND; switching designs unloads the prior audio.
 
 ## Audio assets
 

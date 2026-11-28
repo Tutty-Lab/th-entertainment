@@ -81,6 +81,17 @@
     });
     if(matchMedia('(pointer:fine)').matches){hero.addEventListener('pointermove',e=>{const img=hero.querySelector('img');if(img)img.style.transform=`scale(1.04) translate(${(e.clientX/innerWidth-.5)*10}px,${(e.clientY/innerHeight-.5)*8}px)`});hero.addEventListener('pointerleave',()=>{const img=hero.querySelector('img');if(img)img.style.transform='scale(1.02)'})}
   }
+  document.querySelectorAll('.svc > div > i,.cols > div > small').forEach(el=>el.remove());
+  document.querySelectorAll('.lbl').forEach(el=>{el.textContent=el.textContent.replace(/^\(\s*\d+\s*\)\s*—\s*/, '')});
+  // Remove terminal full stops from display copy without touching dates, URLs or code.
+  document.querySelectorAll('h1,h2,h3,h4,p,.svc span,.cols p,.info p').forEach(el=>{
+    const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);
+    const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+    nodes.forEach((node,index)=>{
+      const next=node.nextSibling;
+      if(index===nodes.length-1||next?.nodeName==='BR')node.textContent=node.textContent.replace(/\.+(\s*)$/, '$1');
+    });
+  });
   if(reduced)document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));
   observeReveal();
 })();
