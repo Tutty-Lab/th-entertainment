@@ -26,4 +26,4 @@ Retain the approved template, move its contents to the site root, adjust relativ
 
 ## Color direction
 
-All three concepts use vermilion `#EF4023`, inspired by the YG Audition reference, with warm paper and charcoal. Brighter red text `#FF785E` is used on dark surfaces, dark labels on red buttons, and dark red on paper. Concert photography retains color; Monolith has a red marquee, Grain a red countdown panel, World Tour red dates and ticket accents. Shared rules live in `templates/shared/color.css`.
+The YG-inspired palette now varies by concept: Monolith uses vivid orange `#FF662E`, Grain warm orange `#FF8B38`, and World Tour vermilion `#EF4023`. Each has matching light text accents, dark accents on paper, a warm process section, a tinted international network section, and a solid accent artist-connection story. The preview switch matches the selected concept. Concert photography retains color. Shared rules live in `templates/shared/color.css`.
