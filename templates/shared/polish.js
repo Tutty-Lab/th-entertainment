@@ -3,9 +3,9 @@
   const concept = location.pathname.includes('03-grain') ? 'grain' : location.pathname.includes('04-world-tour') ? 'tour' : 'monolith';
   document.body.dataset.concept = concept;
   const style = document.createElement('link');
-  style.rel = 'stylesheet'; style.href = '../shared/polish.css'; document.head.append(style);
+  style.rel = 'stylesheet'; style.href = '../shared/polish.css?v=clean-layout-2'; document.head.append(style);
   const color = document.createElement('link');
-  color.rel = 'stylesheet'; color.href = '../shared/color.css?v=20261128'; document.head.append(color);
+  color.rel = 'stylesheet'; color.href = '../shared/color.css?v=clean-layout-2'; document.head.append(color);
   const nav = document.querySelector('nav');
   const links = [['events','SỰ KIỆN'],['artists','NGHỆ SĨ'],['about','GIỚI THIỆU'],['contact','LIÊN HỆ']];
   nav.innerHTML = `<a class="brand" href="#top" aria-label="TH Entertainment — đầu trang">TH<span>ENTERTAINMENT</span></a><div class="nav-links">${links.map(([id,label])=>`<a href="#${id}">${label}</a>`).join('')}</div>`;
@@ -78,8 +78,6 @@
     });
     if(matchMedia('(pointer:fine)').matches){hero.addEventListener('pointermove',e=>{const img=hero.querySelector('img');if(img)img.style.transform=`scale(1.04) translate(${(e.clientX/innerWidth-.5)*10}px,${(e.clientY/innerHeight-.5)*8}px)`});hero.addEventListener('pointerleave',()=>{const img=hero.querySelector('img');if(img)img.style.transform='scale(1.02)'})}
   }
-  document.querySelectorAll('.svc > div > i,.cols > div > small').forEach(el=>el.remove());
-  document.querySelectorAll('.lbl').forEach(el=>{el.textContent=el.textContent.replace(/^\(\s*\d+\s*\)\s*—\s*/, '')});
   // Remove terminal full stops from display copy without touching dates, URLs or code.
   document.querySelectorAll('h1,h2,h3,h4,p,.svc span,.cols p,.info p').forEach(el=>{
     const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);

@@ -36,11 +36,11 @@ footer{text-align:center;padding:64px 16px;color:#555;font:400 12px "Barlow Cond
 <div class="tour-gallery"><img src="../img/1.jpg"><img src="../img/2.jpg"><img src="../img/3.jpg"><img src="../img/4.jpg"><img src="../img/5.jpg"><img src="../img/6.jpg"></div><section class="sec" id="tickets"><h2>TICKET INFO</h2><div class="info">
 <div class="rv"><h3>GENERAL ADMISSION</h3><p>Vé đứng khu vực sân khấu chính. Mở cửa trước 60 phút.</p></div>
 <div class="rv"><h3>VIP</h3><p>Lối vào riêng, quầy bar riêng, merchandise độc quyền.</p></div>
-<div class="rv"><h3>VVIP TABLE</h3><p>Bàn riêng cho nhóm, bottle service, view sân khấu tốt nhất.</p></div></div></section>
-<section class="sec" id="notice"><div class="notice"><b>NOTICE</b><br>· Mỗi tài khoản mua tối đa 4 vé GA / 2 vé VIP mỗi đêm.<br>· Presale dành cho thành viên đăng ký newsletter, mở trước 48h.<br>· Vé điện tử (QR) gửi qua email, xuất trình kèm giấy tờ tùy thân.<br>· Mọi vé bán lại ngoài kênh chính thức không được đảm bảo.</div></section>
+<div class="rv"><h3>VVIP TABLE</h3><p>Bàn riêng cho nhóm, bottle service, view sân khấu tốt nhất.</p></div></div>
+<p class="notice" id="notice">Thông tin hạng vé và chính sách sẽ được công bố cùng từng sự kiện</p></section>
 <div id="more"></div>
 <footer>TH ENTERTAINMENT · GIẢI TRÍ KHÔNG BIÊN GIỚI · © 2026</footer>
-<script src="../shared/data.js"></script><script src="../shared/booking.js"></script><script src="../shared/sections.js"></script>
+<script src="../shared/data.js?v=clean-layout-2"></script><script src="../shared/booking.js?v=clean-layout-2"></script><script src="../shared/sections.js?v=clean-layout-2"></script>
 <script>
 renderSections("#more");
 cities.textContent=TH.events.map(e=>e.city.toUpperCase()).join(" · ");
@@ -48,4 +48,4 @@ tour.innerHTML=TH.events.map(e=>{const d=new Date(e.date);return`<div class="tr 
 <div class="c">${e.city.toUpperCase()}, ${e.country}</div><div class="v">${e.venue}<br>${e.title} — ${e.sub}</div>
 <div><button class="${e.status}" onclick="openBooking('${e.id}')">${e.status==='on-sale'||e.status==='few-left'?'TICKETS':TH.statusLabel[e.status]}</button></div></div>`}).join("");
 observeReveal();setupSound("../audio/04-world-tour.mp3");
-</script><script src="../shared/editorial.js"></script><script src="../shared/polish.js"></script><script src="../../preview.js"></script></body></html>
+</script><script src="../shared/editorial.js?v=clean-layout-2"></script><script src="../shared/polish.js?v=clean-layout-2"></script><script src="../../preview.js?v=clean-layout-2"></script></body></html>

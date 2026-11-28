@@ -16,12 +16,6 @@
     ["DJ NOIR", "Resident DJ · House / Techno", 3], ["MC LUNA", "Host · EN / VI / CZ", 6], ["DJ KAI", "K-Hiphop / Open format", 1],
     ["THE MONO", "Live band", 5], ["SORA", "Vocalist · V-Pop", 2], ["DJ VEX", "EDM / Big room", 8],
   ];
-  const process = [
-    ["01", "Ý tưởng", "Lắng nghe mục tiêu, khán giả và ngân sách; xây concept & format chương trình."],
-    ["02", "Nghệ sĩ", "Đề xuất và booking nghệ sĩ, DJ, MC phù hợp từ mạng lưới quốc tế."],
-    ["03", "Sản xuất", "Venue, sân khấu, âm thanh – ánh sáng, visual, truyền thông và bán vé."],
-    ["04", "Vận hành", "Điều phối show, an ninh, check-in QR, chăm sóc khán giả và đối tác."],
-  ];
   const faq = [
     ["Mua vé như thế nào?", "Chọn sự kiện → chọn hạng vé → thanh toán online. Vé điện tử (QR) được gửi qua email ngay sau khi thanh toán."],
     ["Có được hoàn / đổi vé không?", "Vé không hoàn tiền trừ khi sự kiện bị hủy. Có thể chuyển nhượng tên vé trước sự kiện 48h."],
@@ -75,32 +69,30 @@
 
   window.renderSections = function (sel, only) {
     const S = {
-      about: `<section class="ms" id="about"><div class="two"><div><div class="k">Về chúng tôi</div>
+      about: `<section class="ms" id="about"><div class="two"><div>
         <h2 class="t">Giải trí<br><em>không biên giới.</em></h2>
         <p class="lead">TH Entertainment là đơn vị tổ chức sự kiện và sản xuất giải trí quốc tế với hơn 15 năm kinh nghiệm, chuyên xây dựng và triển khai những chương trình giải trí đa dạng, sáng tạo và quy mô.</p>
         <p class="lead">Sở hữu mạng lưới kết nối tại châu Âu, Việt Nam và các thị trường quốc tế, chúng tôi là cầu nối giữa nghệ sĩ, khán giả, đội ngũ sản xuất và đối tác trong ngành.</p></div>
         <div class="ph rv"><img src="${img(10)}"></div></div></section>`,
-      vision: `<section class="ms" id="vision"><div class="two"><div class="ph rv"><img src="${img(8)}"></div><div><div class="k">Tầm nhìn</div>
+      vision: `<section class="ms" id="vision"><div class="two"><div class="ph rv"><img src="${img(8)}"></div><div>
         <p class="quote">“Âm nhạc, nghệ thuật và trải nghiệm trực tiếp có sức mạnh kết nối các nền văn hóa, cộng đồng và thế hệ.”</p>
         <p class="lead">Trở thành một trong những thương hiệu tổ chức sự kiện và giải trí quốc tế có sức ảnh hưởng — được ghi nhận bởi sự sáng tạo, chất lượng sản xuất và mạng lưới kết nối xuyên quốc gia. Một nền tảng nơi nghệ sĩ phát triển, khán giả được kết nối và những chương trình đặc sắc được hiện thực hóa.</p></div></div></section>`,
-      network: `<section class="ms" id="network"><h2 class="t">Kết nối châu Âu,<br><em>Việt Nam & thế giới</em></h2>
-        <figure class="geographic-map rv"><img src="../img/network-map.svg" width="1200" height="570" alt="Bản đồ thế giới với Việt Nam được tô cam và bản đồ chi tiết châu Âu đánh dấu Anh, Đức, Ba Lan, Séc, Áo, Slovakia" loading="lazy"><figcaption><span>CHÂU ÂU / VIỆT NAM</span><a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a></figcaption></figure>
-        <div class="net">${[["CZ","Czech Republic"],["DE","Germany"],["PL","Poland"],["UK","United Kingdom"],["AT","Austria"],["SK","Slovakia"],["VN","Vietnam"]].map(c=>`<div class="rv"><b>${c[0]}</b><span>${c[1].toUpperCase()}</span></div>`).join("")}</div>
-        <p class="lead" style="margin-top:40px">Kết nối năng lực sản xuất tại châu Âu với nghệ sĩ và nguồn lực sáng tạo từ Việt Nam và quốc tế — mở ra cơ hội tổ chức sự kiện xuyên quốc gia, tour diễn và festival.</p></section>`,
-      strengths: `<section class="ms" id="strengths"><div class="k">Thế mạnh</div><h2 class="t">Vì sao chọn<br><em>TH Entertainment.</em></h2>
-        <div class="str">${strengths.map((s,i)=>`<div class="rv"><b>0${i+1}</b><p>${s}</p></div>`).join("")}</div></section>`,
-      artists: `<section class="ms" id="artists"><div class="k">Nghệ sĩ & DJ roster</div><h2 class="t">Artists<br><em>& resident DJs.</em></h2>
+      network: `<section class="ms" id="network"><div class="network-layout">
+        <div class="network-copy"><h2 class="t">Châu Âu<br><em>Việt Nam</em></h2><p class="lead">Kết nối nghệ sĩ, khán giả và năng lực sản xuất để hiện thực hóa những sân khấu xuyên biên giới</p></div>
+        <figure class="geographic-map rv"><img src="../img/network-map.svg" width="1200" height="570" alt="Bản đồ thế giới với Việt Nam được tô cam và bản đồ chi tiết châu Âu đánh dấu Anh, Đức, Ba Lan, Séc, Áo, Slovakia" loading="lazy"><figcaption><a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a></figcaption></figure>
+        </div><ul class="market-list" aria-label="Các quốc gia kết nối">${["Séc","Đức","Ba Lan","Anh","Áo","Slovakia","Việt Nam"].map(name=>`<li>${name}</li>`).join("")}</ul></section>`,
+      strengths: `<section class="ms" id="strengths"><h2 class="t">Vì sao chọn<br><em>TH Entertainment.</em></h2>
+        <div class="str">${strengths.map(s=>`<div class="rv"><p>${s}</p></div>`).join("")}</div></section>`,
+      artists: `<section class="ms" id="artists"><h2 class="t">Artists<br><em>& resident DJs.</em></h2>
         <div class="art">${artists.map(a=>`<div class="ph rv"><img src="${img(a[2])}"><div><b>${a[0]}</b><small>${a[1]}</small></div></div>`).join("")}</div></section>`,
-      process: `<section class="ms" id="process"><div class="k">Quy trình</div><h2 class="t">Từ ý tưởng<br><em>đến sân khấu.</em></h2>
-        <div class="proc">${process.map(p=>`<div class="rv"><b>${p[0]}</b><h4>${p[1]}</h4><p>${p[2]}</p></div>`).join("")}</div></section>`,
       gallery: `<section class="ms" id="gallery"><h2 class="t">Past <em>events</em></h2>
         <div class="gal">${[11,9,4,7,5].map(n=>`<div class="ph rv"><img src="${img(n)}"></div>`).join("")}</div></section>`,
-      culture: `<section class="ms" id="culture"><div class="two"><div><div class="k">Dấu ấn văn hóa</div><h2 class="t">Việt Nam<br><em>× châu Âu.</em></h2>
+      culture: `<section class="ms" id="culture"><div class="two"><div><h2 class="t">Việt Nam<br><em>× châu Âu.</em></h2>
         <p class="lead">Âm nhạc, nghệ thuật và tài năng sáng tạo Việt Nam là một phần quan trọng trong bản sắc của chúng tôi. Thông qua kết nối nghệ sĩ và cộng đồng tại Việt Nam và châu Âu, chúng tôi đưa nghệ thuật đến với các sân khấu quốc tế — đồng thời luôn rộng mở với mọi khán giả, dòng nhạc và nền văn hóa.</p>
         <p class="quote">Cam kết: ý tưởng xứng tầm, nghệ sĩ phù hợp, quy trình chuyên nghiệp.</p></div><div class="ph rv"><img src="${img(6)}"></div></div></section>`,
       faq: `<section class="ms faq" id="faq"><h2 class="t">FAQ</h2>${faq.map((f,i)=>`<details ${i?"":"open"}><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join("")}</section>`,
       news: `<section class="news" id="presale"><h2>Nhận presale code<br>trước mọi người.</h2><form onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;font-size:18px&quot;>Đã đăng ký ✓</p>'"><input type="email" placeholder="Email của bạn" required><button>ĐĂNG KÝ</button></form></section>`,
-      contact: `<section class="ms" id="contact"><div class="ct"><div><div class="k">Liên hệ & hợp tác</div><h2 class="t">Let's<br><em>work together.</em></h2>
+      contact: `<section class="ms" id="contact"><div class="ct"><div><h2 class="t">Let's<br><em>work together.</em></h2>
         <dl><dt>EMAIL</dt><dd>booking@thentertainment.com</dd><dt>HOTLINE</dt><dd>+420 000 000 000</dd><dt>VĂN PHÒNG</dt><dd>Prague, Czech Republic</dd><dt>SOCIAL</dt><dd><a style="color:inherit" href="https://www.facebook.com/thentertainment1988">Facebook</a> · Instagram · TikTok</dd></dl></div>
         <form class="contact-form" onsubmit="event.preventDefault()">
           <label for="contact-name">Họ và tên <span aria-hidden="true">*</span><input id="contact-name" name="name" autocomplete="name" maxlength="100" required></label>

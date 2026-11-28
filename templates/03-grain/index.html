@@ -32,17 +32,17 @@ footer{padding:64px 48px;border-top:1px solid #333;display:flex;justify-content:
 <nav><b>TH ENT</b><span>EVENTS · ARTISTS · ABOUT · CONTACT</span></nav>
 <div class="split"><div class="a" style="position:relative;overflow:hidden"><img class="th-bg" src="../img/9.jpg" style="opacity:.4"><div style="position:relative"><p>NEXT EVENT — 31.12.2026 · BERLIN</p><h1>NEW<br>YEAR<br>NOIR</h1><p>COUNTDOWN 2027 · ARENA BERLIN</p></div></div>
 <div class="b"><div style="letter-spacing:.3em;font-size:12px">BẮT ĐẦU SAU</div><div class="cd" id="cd"></div><button class="btn" onclick="openBooking('nye-berlin')">ĐẶT VÉ NGAY</button></div></div>
-<section id="events"><div class="lbl">( 01 ) — SỰ KIỆN SẮP TỚI</div><div class="list" id="list"></div></section>
-<section><div class="lbl">( 02 ) — VỀ CHÚNG TÔI</div><p class="big rv">Hơn 15 năm kinh nghiệm. <span>Mạng lưới tại 7 quốc gia.</span> Kết nối nghệ sĩ, âm nhạc và cộng đồng <span>Việt Nam – châu Âu.</span></p>
+<section id="events" aria-label="Sự kiện sắp tới"><div class="list" id="list"></div></section>
+<section><p class="big rv">Hơn 15 năm kinh nghiệm. <span>Mạng lưới tại 7 quốc gia.</span> Kết nối nghệ sĩ, âm nhạc và cộng đồng <span>Việt Nam – châu Âu.</span></p>
 <div class="cols" id="cols"></div></section>
 <div id="more"></div>
 <footer><span>© TH ENTERTAINMENT 2026</span><span>GIẢI TRÍ KHÔNG BIÊN GIỚI</span><a style="color:inherit" href="https://www.facebook.com/thentertainment1988">FACEBOOK</a></footer>
-<script src="../shared/data.js"></script><script src="../shared/booking.js"></script><script src="../shared/sections.js"></script>
+<script src="../shared/data.js?v=clean-layout-2"></script><script src="../shared/booking.js?v=clean-layout-2"></script><script src="../shared/sections.js?v=clean-layout-2"></script>
 <script>
 renderSections("#more");
 list.innerHTML=TH.events.map(e=>`<div class="row rv" onclick="openBooking('${e.id}')"><img src="${e.img}"><div>${TH.fmtDate(e.date)}</div><div class="t">${e.title} <small style="font:14px 'Be Vietnam Pro';color:#777">${e.sub}</small></div><div>${e.city}<br><small style="color:#777">${e.venue}</small></div><div class="s ${e.status}">${TH.statusLabel[e.status]}</div></div>`).join("");
-cols.innerHTML=TH.services.map((s,i)=>`<div class="rv"><small style="color:#555">0${i+1}</small><h4>${s[0]}</h4><p>${s[1]}</p></div>`).join("");
+cols.innerHTML=TH.services.map(s=>`<div class="rv"><h4>${s[0]}</h4><p>${s[1]}</p></div>`).join("");
 const T=new Date(TH.events[1].date);function tick(){let d=Math.max(0,T-new Date());const u=[[864e5,'NGÀY'],[36e5,'GIỜ'],[6e4,'PHÚT'],[1e3,'GIÂY']];
 cd.innerHTML=u.map(([m,l])=>{const v=Math.floor(d/m);d-=v*m;return`<div><b>${String(v).padStart(2,'0')}</b><span>${l}</span></div>`}).join("")}tick();setInterval(tick,1000);
 observeReveal();setupSound("../audio/03-grain.mp3");
-</script><script src="../shared/editorial.js"></script><script src="../shared/polish.js"></script><script src="../../preview.js"></script></body></html>
+</script><script src="../shared/editorial.js?v=clean-layout-2"></script><script src="../shared/polish.js?v=clean-layout-2"></script><script src="../../preview.js?v=clean-layout-2"></script></body></html>

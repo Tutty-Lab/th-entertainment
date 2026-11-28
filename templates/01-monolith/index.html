@@ -46,13 +46,13 @@ footer{padding:80px 32px 40px;border-top:1px solid #222}footer h2{font-size:clam
 <div id="more"></div>
 <footer><p style="letter-spacing:.2em;color:#777">KIẾN TẠO TRẢI NGHIỆM. KẾT NỐI CỘNG ĐỒNG.</p><h2>TH ENT.</h2>
 <p style="color:#555;font-size:12px">© 2026 TH Entertainment · <a href="https://www.facebook.com/thentertainment1988">Facebook</a> · CZ · DE · PL · UK · AT · SK · VN</p></footer>
-<script src="../shared/data.js"></script><script src="../shared/booking.js"></script><script src="../shared/sections.js"></script>
+<script src="../shared/data.js?v=clean-layout-2"></script><script src="../shared/booking.js?v=clean-layout-2"></script><script src="../shared/sections.js?v=clean-layout-2"></script>
 <script>
 renderSections("#more");
 const t=" GIẢI TRÍ KHÔNG BIÊN GIỚI ✦ ENTERTAINMENT WITHOUT BORDERS ✦";mq.textContent=t.repeat(8);
 grid.innerHTML=TH.events.map(e=>`<div class="card rv" onclick="openBooking('${e.id}')"><img class="th-bg" src="${e.img}"><span class="st">${TH.statusLabel[e.status]}</span>
 <div><div class="d">${TH.fmtDate(e.date,{day:'2-digit',month:'short'})}</div><h3>${e.title}</h3><p>${e.sub.toUpperCase()}</p><p>${e.city.toUpperCase()} · ${e.venue}</p></div></div>`).join("");
-svc.innerHTML=TH.services.map((s,i)=>`<div class="rv"><i>0${i+1}</i><b>${s[0]}</b><span>${s[1]}</span></div>`).join("");
+svc.innerHTML=TH.services.map(s=>`<div class="rv"><b>${s[0]}</b><span>${s[1]}</span></div>`).join("");
 observeReveal();
 setupSound("../audio/01-monolith.mp3");
-</script><script src="../shared/editorial.js"></script><script src="../shared/polish.js"></script><script src="../../preview.js"></script></body></html>
+</script><script src="../shared/editorial.js?v=clean-layout-2"></script><script src="../shared/polish.js?v=clean-layout-2"></script><script src="../../preview.js?v=clean-layout-2"></script></body></html>

@@ -3,7 +3,7 @@
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const picture = (name, className = '') => `<img class="${className}" src="../img/${name}.jpg" alt="" loading="lazy" decoding="async">`;
   const sheet = document.createElement('link');
-  sheet.rel = 'stylesheet'; sheet.href = '../shared/editorial.css'; document.head.append(sheet);
+  sheet.rel = 'stylesheet'; sheet.href = '../shared/editorial.css?v=clean-layout-2'; document.head.append(sheet);
 
   // Services: an image beside each capability, rather than a wall of labels.
   const serviceImages = ['stage','festival','performance','lights','live','crowd','9'];
@@ -21,17 +21,12 @@
       ['SẢN XUẤT','lights',[3,4,5]]
     ];
     strengths.className = 'strength-stories';
-    strengths.innerHTML = groups.map(([title,image,indices],i) => `<article class="strength-story rv"><div class="story-image">${picture(image)}</div><div class="story-copy"><span class="story-index">0${i+1}</span><h3>${title}</h3><ul>${indices.map(index=>`<li>${copy[index]}</li>`).join('')}</ul></div></article>`).join('');
+    strengths.innerHTML = groups.map(([title,image,indices]) => `<article class="strength-story rv"><div class="story-image">${picture(image)}</div><div class="story-copy"><h3>${title}</h3><ul>${indices.map(index=>`<li>${copy[index]}</li>`).join('')}</ul></div></article>`).join('');
   }
-
-  document.querySelectorAll('.proc > div').forEach((item,i) => {
-    item.insertAdjacentHTML('afterbegin', `<div class="process-photo">${picture(['festival','performance','lights','crowd'][i])}</div>`);
-  });
 
   // Preserve the profile, but give the vision its own photographic scene.
   document.querySelector('#vision')?.classList.add('vision-scene');
   document.querySelector('#culture')?.classList.add('culture-scene');
-  document.querySelector('#network .lead')?.replaceChildren(document.createTextNode('Năng lực sản xuất tại châu Âu. Nguồn lực sáng tạo từ Việt Nam. Cùng hiện thực hóa những sân khấu xuyên biên giới.'));
 
   const gallery = document.querySelector('#gallery');
   if (gallery) {
@@ -47,12 +42,7 @@
     layout.append(content);faq.append(layout);
   }
 
-  ['#strengths','#artists','#process','#faq','#gallery'].forEach(selector => {
-    const section = document.querySelector(selector);
-    if (!section) return;
-    section.querySelector('.k')?.remove();
-  });
-  document.querySelectorAll('.story-index,.proc > div > b').forEach(element => element.remove());
+
   document.querySelectorAll('.ms h2.t,.story-copy h3,.faq summary').forEach(element => {
     element.childNodes.forEach(node => { if (node.nodeType === Node.TEXT_NODE) node.textContent = node.textContent.replace(/[.]\s*$/, ''); });
   });

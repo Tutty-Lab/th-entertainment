@@ -121,34 +121,60 @@ body[data-concept=monolith] #events h2{font-size:clamp(40px,7vw,104px);font-weig
 #gallery .t{white-space:nowrap}
 #gallery .gal{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;scrollbar-width:thin;scrollbar-color:var(--accent) transparent}
 #gallery .gal .ph{flex:0 0 32%;aspect-ratio:4/3;scroll-snap-align:start}
-.geographic-map{margin:0 0 24px;background:#eee6d9;color:#574637}
+.geographic-map{margin:0;background:#eee6d9;color:#574637}
 .geographic-map>img{display:block;width:100%;height:auto;filter:none}
 .geographic-map figcaption{display:flex;justify-content:space-between;gap:16px;padding:16px 24px;border-top:1px solid #57463730;font:500 10px/1.6 'Be Vietnam Pro',sans-serif;letter-spacing:.08em}
-.geographic-map figcaption a{text-decoration:underline;text-underline-offset:3px}
+.geographic-map figcaption a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 #network .net{border:0;gap:0}
 #network .net>div{min-height:0;gap:12px;padding:20px 16px;border:0;border-left:1px solid #ffffff30}
 #network .net b{font-size:28px}
 #network .net span{font-size:9px;line-height:1.6}
 #network .lead{font-size:16px;max-width:760px}
-.ct .contact-form{align-self:start;align-content:start;gap:24px 20px;padding:32px;background:#ffffff06;border:1px solid var(--line)}
+#network.ms{padding-block:64px}
+body[data-concept] #network{background:var(--paper);color:var(--ink);--fg:var(--ink);--mut:#59534f;--line:#d8d2c9}
+#network .network-layout{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:32px;align-items:center}
+#network .network-copy{padding-bottom:0}
+#network.ms h2.t{font-size:clamp(38px,4.8vw,68px);margin-bottom:24px}
+#network.ms h2.t em{color:var(--accent-deep)}
+#network .lead{margin:0;font-size:15px;color:#514137;line-height:1.8;max-width:360px;opacity:1}
+#network .geographic-map{margin:0}
+#network .geographic-map figcaption{justify-content:flex-end;padding:8px 16px}
+#network .market-list{display:flex;flex-wrap:wrap;gap:12px 32px;margin:24px 0 0;padding:20px 0 0;list-style:none;border-top:1px solid #c9bdac}
+#network .market-list li{color:var(--ink);font:500 14px/1.5 'Be Vietnam Pro',sans-serif}
+body[data-concept=tour] #tickets.sec{padding-block:64px}
+body[data-concept=tour] #tickets h2{margin-bottom:28px}
+body[data-concept=tour] #tickets .notice{border:0;border-top:1px solid var(--line);padding:20px 0 0;margin:24px 0 0;font-size:12px;line-height:1.8}
+body[data-concept=tour] .info{gap:12px}
+body[data-concept=tour] .info>div{padding:24px}
+.ct{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start;gap:48px}
+#contact h2.t{font-size:clamp(36px,4.7vw,64px);margin-bottom:24px}
+#contact .ct dd{font-size:16px;line-height:1.7}
+#contact .ct dd a{color:inherit;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--accent)}
+#contact .ct dd a:hover{color:var(--accent-text)}
+.ct .contact-form{align-self:start;align-content:start;gap:20px;padding:24px;background:#ffffff06;border:1px solid var(--line)}
 .contact-form label{display:flex;flex-wrap:wrap;gap:10px 5px;align-content:start;font-size:12px;line-height:1.6;min-width:0;color:var(--fg)}
 .contact-form label>span{color:var(--accent-text)}
 .ct .contact-form input,.ct .contact-form select,.ct .contact-form textarea{flex-basis:100%;border-color:#ffffff35;background:#ffffff05;border-radius:0;font-size:14px;line-height:1.6;min-height:52px;padding:14px 12px;transition:border-color .2s}
-.ct .contact-form textarea{resize:vertical;min-height:160px}
+.ct .contact-form textarea{resize:vertical;min-height:128px}
 .ct .contact-form :is(input,select,textarea):hover{border-color:#ffffff80}
 .ct .contact-form :is(input,select,textarea):focus-visible{outline:2px solid var(--accent-text);outline-offset:2px;border-color:transparent}
 .ct .contact-form :is(input,select,textarea):user-invalid{border-color:#ff917e}
 .ct .contact-form .form-hint{margin:-14px 0 0;color:#aaa;font-size:11px;line-height:1.7}
 .ct .contact-form button{min-height:52px;letter-spacing:.1em;font-weight:600}
 .ct .contact-form [role=status]{margin:0;padding:16px;border-left:2px solid var(--accent);background:#ffffff08}
+@media(max-width:1000px){.ct{grid-template-columns:minmax(0,1fr);gap:32px}}
 @media(max-width:760px){
   #gallery .gal .ph{flex-basis:82%}
   #gallery .t{font-size:clamp(32px,9vw,64px)}
-  .geographic-map{overflow-x:auto}
-  .geographic-map>img{min-width:660px}
-  .geographic-map figcaption{min-width:660px;padding:12px 16px}
+  .geographic-map>img{min-width:0}
+  .geographic-map figcaption{padding:12px 16px}
   #network .net{grid-template-columns:repeat(3,minmax(0,1fr))}
   #network .net>div{padding:16px 10px}
+  #network .network-layout{grid-template-columns:1fr;gap:20px}
+  #network .network-copy{padding-bottom:0}
+  #network.ms{padding-block:48px}
+  #network .market-list{gap:12px 24px}
+  .ct{grid-template-columns:minmax(0,1fr);gap:32px}
   .ct .contact-form{padding:24px 16px;gap:24px}
   body[data-concept=monolith] .hero h1{font-size:24vw}
 }

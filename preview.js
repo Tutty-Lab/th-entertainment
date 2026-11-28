@@ -23,7 +23,7 @@
   const dock = document.createElement('aside');
   dock.className = 'design-dock';
   dock.setAttribute('aria-label', 'Chuyển phương án thiết kế');
-  dock.innerHTML = `<div class="design-switch" role="group" aria-label="Phương án thiết kế"><span class="glass-pill" aria-hidden="true"></span>${Object.entries({ monolith: '01 Monolith', grain: '03 Grain', 'world-tour': '04 World Tour' }).map(([name, label]) => `<button type="button" data-design="${name}" aria-pressed="${name === key}">${label}</button>`).join('')}</div>`;
+  dock.innerHTML = `<div class="design-switch" role="group" aria-label="Phương án thiết kế"><span class="glass-pill" aria-hidden="true"></span>${Object.entries({ monolith: 'Monolith', grain: 'Grain', 'world-tour': 'World Tour' }).map(([name, label]) => `<button type="button" data-design="${name}" aria-pressed="${name === key}">${label}</button>`).join('')}</div>`;
   document.body.append(dock);
 
   const buttons = [...dock.querySelectorAll('button')];
