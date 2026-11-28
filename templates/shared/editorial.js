@@ -47,7 +47,7 @@
     layout.append(content);faq.append(layout);
   }
 
-  ['#strengths','#artists','#process'].forEach(selector => {
+  ['#strengths','#artists','#process','#faq','#gallery'].forEach(selector => {
     const section = document.querySelector(selector);
     if (!section) return;
     section.querySelector('.k')?.remove();
@@ -69,7 +69,7 @@
   const about = document.querySelector('#about');
   if(about) {
     const interlude = document.createElement('section');interlude.className='visual-interlude';
-    interlude.innerHTML=`<div class="interlude-image">${picture('festival')}</div><div class="interlude-copy"><span>TH ENTERTAINMENT</span><p class="rv">FEEL IT.<br>LIVE IT.</p><span>ÂM NHẠC. CON NGƯỜI. KHOẢNH KHẮC.</span></div>`;
+    interlude.innerHTML=`<div class="interlude-image">${picture('festival')}</div><div class="interlude-copy"><span>TH ENTERTAINMENT</span><p class="rv">FEEL IT<br>LIVE IT</p><span>ÂM NHẠC / CON NGƯỜI / KHOẢNH KHẮC</span></div>`;
     about.before(interlude);
   }
   const contact = document.querySelector('#contact .ct > div');

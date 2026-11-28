@@ -1,31 +1,31 @@
 <!doctype html>
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 fill=%27black%27/%3E%3Ctext x=%2710%27 y=%2770%27 fill=%27white%27 font-size=%2760%27%3ETH%3C/text%3E%3C/svg%3E"><title>TH Entertainment — World Tour</title>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#050505;--fg:#fff;--mut:#777;--line:#262626;--card:#111;--disp:Oswald}
-*{box-sizing:border-box}body{margin:0;background:#050505;color:#fff;font-family:Inter,sans-serif;overflow-x:hidden}
-nav{display:flex;justify-content:center;gap:40px;padding:22px;font:500 13px Oswald;letter-spacing:.3em;border-bottom:1px solid #1d1d1d;position:sticky;top:0;background:rgba(5,5,5,.85);backdrop-filter:blur(10px);z-index:20}
+:root{--bg:#050505;--fg:#fff;--mut:#777;--line:#262626;--card:#111;--disp:"Barlow Condensed"}
+*{box-sizing:border-box}body{margin:0;background:#050505;color:#fff;font-family:'Be Vietnam Pro',sans-serif;overflow-x:hidden}
+nav{display:flex;justify-content:center;gap:40px;padding:22px;font:500 13px "Barlow Condensed";letter-spacing:.3em;border-bottom:1px solid #1d1d1d;position:sticky;top:0;background:rgba(5,5,5,.85);backdrop-filter:blur(10px);z-index:20}
 .poster{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 16px;position:relative;overflow:hidden}
 .poster::before{content:"";position:absolute;width:140vmax;height:140vmax;background:conic-gradient(from 0deg,transparent,rgba(255,255,255,.08),transparent 30%);animation:spin 12s linear infinite}
 @keyframes spin{to{transform:rotate(1turn)}}
-.poster .pre{font:300 14px Oswald;letter-spacing:.8em;color:#999;position:relative}
-.poster h1{font:700 clamp(70px,15vw,240px)/.85 Oswald;margin:24px 0;letter-spacing:-.02em;position:relative;background:linear-gradient(180deg,#fff 40%,#555);-webkit-background-clip:text;color:transparent}
-.poster .yr{font:300 clamp(22px,3vw,40px) Oswald;letter-spacing:1em;position:relative}
-.poster .cities{margin-top:48px;font:500 13px Oswald;letter-spacing:.35em;color:#888;max-width:800px;line-height:2;position:relative}
-.sec{max-width:1100px;margin:0 auto;padding:96px 16px}.sec h2{font:700 48px Oswald;letter-spacing:.1em;text-align:center;margin:0 0 48px}
+.poster .pre{font:300 14px "Barlow Condensed";letter-spacing:.8em;color:#999;position:relative}
+.poster h1{font:700 clamp(70px,15vw,240px)/.85 "Barlow Condensed";margin:24px 0;letter-spacing:-.02em;position:relative;background:linear-gradient(180deg,#fff 40%,#555);-webkit-background-clip:text;color:transparent}
+.poster .yr{font:300 clamp(22px,3vw,40px) "Barlow Condensed";letter-spacing:1em;position:relative}
+.poster .cities{margin-top:48px;font:500 13px "Barlow Condensed";letter-spacing:.35em;color:#888;max-width:800px;line-height:2;position:relative}
+.sec{max-width:1100px;margin:0 auto;padding:96px 16px}.sec h2{font:700 48px "Barlow Condensed";letter-spacing:.1em;text-align:center;margin:0 0 48px}
 .tour{border-top:1px solid #fff}
 .tr{display:grid;grid-template-columns:120px 1fr 1fr 160px;align-items:center;padding:22px 8px;border-bottom:1px solid #262626;transition:.25s}
-.tr:hover{background:#fff;color:#000}.tr .d{font:700 28px Oswald;line-height:1}.tr .d small{display:block;font:400 11px Inter;letter-spacing:.2em;color:#888}
-.tr .c{font:500 22px Oswald;letter-spacing:.1em}.tr .v{color:#999;font-size:14px}.tr:hover .v,.tr:hover .d small{color:#444}
-.tr button{border:1px solid currentColor;background:none;color:inherit;padding:12px 0;width:100%;font:500 12px Oswald;letter-spacing:.25em;cursor:pointer}
+.tr:hover{background:#fff;color:#000}.tr .d{font:700 28px "Barlow Condensed";line-height:1}.tr .d small{display:block;font:400 11px "Be Vietnam Pro";letter-spacing:.2em;color:#888}
+.tr .c{font:500 22px "Barlow Condensed";letter-spacing:.1em}.tr .v{color:#999;font-size:14px}.tr:hover .v,.tr:hover .d small{color:#444}
+.tr button{border:1px solid currentColor;background:none;color:inherit;padding:12px 0;width:100%;font:500 12px "Barlow Condensed";letter-spacing:.25em;cursor:pointer}
 .tr button.on-sale,.tr button.few-left{background:#fff;color:#000}.tr:hover button.on-sale,.tr:hover button.few-left{background:#000;color:#fff}
 .tr button.sold-out{opacity:.4}
 .info{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.info div{border:1px solid #262626;padding:32px}
-.info h3{font:500 20px Oswald;letter-spacing:.15em;margin:0 0 12px}.info p{color:#999;line-height:1.6;margin:0;font-size:14px}
-.notice{border:1px solid #333;padding:32px;font-size:14px;line-height:1.8;color:#aaa}.notice b{color:#fff;font-family:Oswald;letter-spacing:.15em}
+.info h3{font:500 20px "Barlow Condensed";letter-spacing:.15em;margin:0 0 12px}.info p{color:#999;line-height:1.6;margin:0;font-size:14px}
+.notice{border:1px solid #333;padding:32px;font-size:14px;line-height:1.8;color:#aaa}.notice b{color:#fff;font-family:"Barlow Condensed",sans-serif;letter-spacing:.15em}
 .tour-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:0 4px}.tour-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:grayscale(1);transition:.4s}.tour-gallery img:hover{filter:none}
-footer{text-align:center;padding:64px 16px;color:#555;font:400 12px Oswald;letter-spacing:.3em;border-top:1px solid #1d1d1d}
+footer{text-align:center;padding:64px 16px;color:#555;font:400 12px "Barlow Condensed";letter-spacing:.3em;border-top:1px solid #1d1d1d}
 .rv{opacity:0;transform:translateX(-30px);transition:.7s}.rv.in{opacity:1;transform:none}
 @media(max-width:760px){nav{gap:16px;font-size:11px;letter-spacing:.15em;overflow-x:auto;justify-content:flex-start}.tr{grid-template-columns:80px 1fr;gap:8px}.tr .v{grid-column:2}.tr>div:last-child{grid-column:1/-1}.info{grid-template-columns:1fr}}
 </style></head><body>

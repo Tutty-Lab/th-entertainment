@@ -25,18 +25,15 @@
     [...group.children].forEach((el,i)=>el.style.transitionDelay=`${(i%3)*85}ms`);
   });
   document.querySelectorAll('img').forEach(img=>{
-    img.alt = img.closest('#artists') ? 'Ảnh minh họa nghệ sĩ và sân khấu' : 'Không khí concert và nightlife — ảnh minh họa';
+    if (!img.alt) img.alt = img.closest('#artists') ? 'Ảnh minh họa nghệ sĩ và sân khấu' : 'Không khí concert và nightlife — ảnh minh họa';
     if(!img.closest('.hero,.split,.poster')){img.loading='lazy';img.decoding='async'}
   });
   document.querySelectorAll('.card[onclick],.row[onclick]').forEach(card=>{
     card.tabIndex=0;card.setAttribute('role','button');
     card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();card.click()}});
   });
-  document.querySelectorAll('.stats b').forEach((el,i)=>{if(i>1){el.removeAttribute('data-n');el.textContent='—'}});
-  // Existing counter runs briefly; remove unverified metrics entirely.
-  const stats = document.querySelector('.stats');if(stats) [...stats.children].slice(2).forEach(el=>el.style.display='none');
   document.querySelectorAll('input,textarea,select').forEach(el=>{
-    el.setAttribute('aria-label',el.placeholder||'Loại yêu cầu');
+    if (!el.labels?.length) el.setAttribute('aria-label',el.placeholder||'Loại yêu cầu');
     if(/email/i.test(el.placeholder)){el.type='email';el.required=true}
   });
   document.querySelectorAll('.news form,.ct form').forEach(form=>{
@@ -44,7 +41,7 @@
       e.preventDefault();
       let status=form.querySelector('[role=status]');
       if(!status){status=document.createElement('p');status.setAttribute('role','status');status.className='full';form.append(status)}
-      status.textContent='Đây là bản duyệt giao diện. Thông tin chưa được gửi hoặc lưu.';
+      status.textContent='Bản duyệt giao diện — thông tin chưa được gửi hoặc lưu';
     };
   });
   const contact = document.querySelector('.ct dl');

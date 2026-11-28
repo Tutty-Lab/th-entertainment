@@ -14,7 +14,7 @@ Run `npm run build`, then `python -m http.server 4173 --directory public`. Open 
 
 Events, artist names, ticket prices and photos are illustrative. Ticket and contact interactions are UI demos; no purchases, submissions or email storage. The official Facebook link is supplied by the client. Images are inherited Unsplash illustrations; replace with approved TH assets before production. Fonts load from Google Fonts.
 
-Motion includes Monolith title reveals, Grain blur reveals and analog grain, World Tour poster lighting, staggered content, image hover, desktop pointer movement, progress and smooth anchors. Visual sections add scroll parallax, a photographic vision scene, image-led capabilities and process, a full-width concert interlude and a simple international country list. Six additional Unsplash concert photos are stored locally. `prefers-reduced-motion` disables animation. Sound starts only after the visitor presses SOUND; switching designs unloads the prior audio.
+Motion includes Monolith title reveals, Grain blur reveals and analog grain, World Tour poster lighting, staggered content, image hover, desktop pointer movement, progress and smooth anchors. Visual sections add scroll parallax, a photographic vision scene, image-led capabilities and process, a full-width concert interlude and a Natural Earth geographic map showing the seven active markets. Six additional Unsplash concert photos are stored locally. `prefers-reduced-motion` disables animation. Sound starts only after the visitor presses SOUND; switching designs unloads the prior audio.
 
 ## Audio assets
 
@@ -26,4 +26,4 @@ Retain the approved template, move its contents to the site root, adjust relativ
 
 ## Color direction
 
-The YG-inspired palette now varies by concept: Monolith uses vivid orange `#FF662E`, Grain warm orange `#FF8B38`, and World Tour vermilion `#EF4023`. Each has matching light text accents, dark accents on paper, a warm process section, a tinted international network section, and a solid accent artist-connection story. The preview switch matches the selected concept. Concert photography retains color. Shared rules live in `templates/shared/color.css`.
+The YG-inspired palette now varies by concept: Monolith uses vivid orange `#FF662E`, Grain warm orange `#FF8B38`, and World Tour vermilion `#EF4023`. Each has matching light text accents, dark accents on paper, a warm process section, a tinted geographic network section, and a solid accent artist-connection story. The preview switch matches the selected concept. Concert photography retains color. Display type uses `Archivo` / `Barlow Condensed`; body copy uses `Be Vietnam Pro` for Vietnamese support. Shared rules live in `templates/shared/color.css`.

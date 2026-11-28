@@ -3,7 +3,7 @@
   const css = `
   .thb-back{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);display:none;z-index:999;align-items:center;justify-content:center;padding:16px}
   .thb-back.open{display:flex;animation:thbf .3s}
-  .thb{background:#0b0b0b;color:#f2f2f2;border:1px solid #333;width:100%;max-width:520px;max-height:90vh;overflow:auto;font-family:Inter,system-ui,sans-serif;animation:thbs .45s cubic-bezier(.2,.9,.2,1)}
+  .thb{background:#0b0b0b;color:#f2f2f2;border:1px solid #333;width:100%;max-width:520px;max-height:90vh;overflow:auto;font-family:"Be Vietnam Pro",sans-serif;animation:thbs .45s cubic-bezier(.2,.9,.2,1)}
   .thb header{padding:24px;border-bottom:1px solid #222}
   .thb h3{margin:0;font-size:28px;letter-spacing:.02em;text-transform:uppercase}
   .thb small{color:#8a8a8a;letter-spacing:.12em;font-size:11px}
@@ -18,7 +18,7 @@
   .thb .go:disabled{opacity:.3;cursor:not-allowed}
   .thb .x{float:right;background:none;border:0;color:#888;font-size:22px;cursor:pointer}
   .thb input{width:100%;box-sizing:border-box;background:#111;border:1px solid #333;color:#fff;padding:12px;margin-top:8px}
-  .thb-sound{position:fixed;right:16px;bottom:16px;z-index:998;border:1px solid currentColor;background:transparent;color:inherit;padding:10px 14px;font:700 11px/1 Inter,sans-serif;letter-spacing:.2em;cursor:pointer;mix-blend-mode:difference;color:#fff}
+  .thb-sound{position:fixed;right:16px;bottom:16px;z-index:998;border:1px solid currentColor;background:transparent;color:inherit;padding:10px 14px;font:700 11px/1 "Be Vietnam Pro",sans-serif;letter-spacing:.2em;cursor:pointer;mix-blend-mode:difference;color:#fff}
   .th-bg{position:absolute!important;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.15);z-index:0;pointer-events:none;transition:transform 1.2s cubic-bezier(.2,.9,.2,1),opacity .5s}
   @keyframes thbf{from{opacity:0}} @keyframes thbs{from{transform:translateY(40px);opacity:0}}`;
   document.head.insertAdjacentHTML("beforeend", `<style>${css}</style>`);

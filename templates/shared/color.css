@@ -6,7 +6,6 @@ body[data-concept=tour]{--accent:#ef4023;--accent-text:#ff846b;--accent-deep:#a8
 ::selection{background:var(--accent);color:#111}
 :focus-visible{outline-color:var(--accent-text)!important}
 .reading-progress{background:var(--accent)}
-.brand::after{content:'';width:7px;height:7px;background:var(--accent);border-radius:50%;align-self:flex-end;margin-bottom:3px}
 .nav-links a:after{background:var(--accent);height:2px}
 .nav-links a:hover{color:var(--accent-text)}
 .ms .k{color:var(--accent-text)}
@@ -36,7 +35,6 @@ body[data-concept=tour]{--accent:#ef4023;--accent-text:#ff846b;--accent-deep:#a8
 .ct button:hover,.hero .meta button:hover,.btn:hover{background:var(--paper);color:var(--ink);transform:translateY(-2px)}
 .tr:hover button.on-sale,.tr:hover button.few-left{background:var(--accent);color:#111}
 .card .st{background:#151515df;color:#fff;border-color:#ffffff50}
-.card .st:before{content:'';display:inline-block;width:6px;height:6px;background:var(--accent-text);border-radius:50%;margin-right:8px}
 .list .s.on-sale,.list .s.few-left{color:var(--accent-text)}
 .faq summary:after{color:var(--accent-text)}
 .faq details[open]{border-bottom-color:var(--accent)}
@@ -54,7 +52,6 @@ body[data-concept=tour]{--accent:#ef4023;--accent-text:#ff846b;--accent-deep:#a8
 /* 01 — red marquee and outlined headline, keeping the monumental composition. */
 body[data-concept=monolith] .marq{background:var(--accent);color:#111;border:0}
 body[data-concept=monolith] .hero h1 span:nth-child(2) i{-webkit-text-stroke-color:var(--accent-text)}
-body[data-concept=monolith] .stats b{color:var(--accent-text)}
 body[data-concept=monolith] .svc .service-visual:hover{background:#211310}
 
 /* 03 — a bold red countdown panel against warm paper image stories. */
@@ -99,7 +96,6 @@ body[data-concept] .strength-story:nth-child(2) .story-copy li{border-color:#161
 
 body[data-concept=monolith] .hero h1 span:nth-child(2) i{color:var(--accent);-webkit-text-stroke:0}
 body[data-concept=monolith] .hero .meta{padding-bottom:48px;color:#ddd}
-body[data-concept=monolith] .stats{border-left:6px solid var(--accent);padding-left:28px}
 body[data-concept=grain] .split .b{background-image:radial-gradient(circle at 100% 0,#ffc278 0,transparent 65%)}
 body[data-concept=grain] .split .a p{color:#e6c8a8}
 body[data-concept=tour] .poster .yr{background:var(--accent);color:var(--ink);padding:12px 20px 12px 36px;font-weight:500}
@@ -114,3 +110,45 @@ body[data-concept=tour] .tour .tr:hover .d{color:var(--accent-deep)}
 .interlude-copy p:after{display:none}
 @media(max-width:1000px){.svc .service-visual{grid-template-columns:110px minmax(0,1fr)}.svc .service-visual>span{grid-column:2}}
 @media(max-width:760px){.svc .service-visual{grid-template-columns:90px minmax(0,1fr)}}
+
+/* Short headings and a single photographic strip keep the page moving. */
+body{font-synthesis:none}
+button,input,select,textarea{font-family:'Be Vietnam Pro',sans-serif}
+body[data-concept=monolith] .hero h1{font-weight:800;font-size:clamp(80px,18vw,280px);line-height:.94}
+body[data-concept=monolith] #events h2{font-size:clamp(40px,7vw,104px);font-weight:700;line-height:1.05}
+.brand{font-family:'Be Vietnam Pro',sans-serif;font-size:26px;letter-spacing:-.07em}
+.brand span{letter-spacing:.12em}
+#gallery .t{white-space:nowrap}
+#gallery .gal{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;scrollbar-width:thin;scrollbar-color:var(--accent) transparent}
+#gallery .gal .ph{flex:0 0 32%;aspect-ratio:4/3;scroll-snap-align:start}
+.geographic-map{margin:0 0 24px;background:#eee6d9;color:#574637}
+.geographic-map>img{display:block;width:100%;height:auto;filter:none}
+.geographic-map figcaption{display:flex;justify-content:space-between;gap:16px;padding:16px 24px;border-top:1px solid #57463730;font:500 10px/1.6 'Be Vietnam Pro',sans-serif;letter-spacing:.08em}
+.geographic-map figcaption a{text-decoration:underline;text-underline-offset:3px}
+#network .net{border:0;gap:0}
+#network .net>div{min-height:0;gap:12px;padding:20px 16px;border:0;border-left:1px solid #ffffff30}
+#network .net b{font-size:28px}
+#network .net span{font-size:9px;line-height:1.6}
+#network .lead{font-size:16px;max-width:760px}
+.ct .contact-form{align-self:start;align-content:start;gap:24px 20px;padding:32px;background:#ffffff06;border:1px solid var(--line)}
+.contact-form label{display:flex;flex-wrap:wrap;gap:10px 5px;align-content:start;font-size:12px;line-height:1.6;min-width:0;color:var(--fg)}
+.contact-form label>span{color:var(--accent-text)}
+.ct .contact-form input,.ct .contact-form select,.ct .contact-form textarea{flex-basis:100%;border-color:#ffffff35;background:#ffffff05;border-radius:0;font-size:14px;line-height:1.6;min-height:52px;padding:14px 12px;transition:border-color .2s}
+.ct .contact-form textarea{resize:vertical;min-height:160px}
+.ct .contact-form :is(input,select,textarea):hover{border-color:#ffffff80}
+.ct .contact-form :is(input,select,textarea):focus-visible{outline:2px solid var(--accent-text);outline-offset:2px;border-color:transparent}
+.ct .contact-form :is(input,select,textarea):user-invalid{border-color:#ff917e}
+.ct .contact-form .form-hint{margin:-14px 0 0;color:#aaa;font-size:11px;line-height:1.7}
+.ct .contact-form button{min-height:52px;letter-spacing:.1em;font-weight:600}
+.ct .contact-form [role=status]{margin:0;padding:16px;border-left:2px solid var(--accent);background:#ffffff08}
+@media(max-width:760px){
+  #gallery .gal .ph{flex-basis:82%}
+  #gallery .t{font-size:clamp(32px,9vw,64px)}
+  .geographic-map{overflow-x:auto}
+  .geographic-map>img{min-width:660px}
+  .geographic-map figcaption{min-width:660px;padding:12px 16px}
+  #network .net{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #network .net>div{padding:16px 10px}
+  .ct .contact-form{padding:24px 16px;gap:24px}
+  body[data-concept=monolith] .hero h1{font-size:24vw}
+}

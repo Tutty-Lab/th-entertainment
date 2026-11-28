@@ -83,8 +83,9 @@
       vision: `<section class="ms" id="vision"><div class="two"><div class="ph rv"><img src="${img(8)}"></div><div><div class="k">Tầm nhìn</div>
         <p class="quote">“Âm nhạc, nghệ thuật và trải nghiệm trực tiếp có sức mạnh kết nối các nền văn hóa, cộng đồng và thế hệ.”</p>
         <p class="lead">Trở thành một trong những thương hiệu tổ chức sự kiện và giải trí quốc tế có sức ảnh hưởng — được ghi nhận bởi sự sáng tạo, chất lượng sản xuất và mạng lưới kết nối xuyên quốc gia. Một nền tảng nơi nghệ sĩ phát triển, khán giả được kết nối và những chương trình đặc sắc được hiện thực hóa.</p></div></div></section>`,
-      network: `<section class="ms" id="network"><div class="k">Mạng lưới quốc tế</div><h2 class="t">Kết nối châu Âu,<br><em>Việt Nam & thế giới.</em></h2>
-        <div class="net">${[["CZ","Czech Republic"],["DE","Germany"],["PL","Poland"],["UK","United Kingdom"],["AT","Austria"],["SK","Slovakia"],["VN","Vietnam"]].map(c=>`<div class="rv"><i></i><b>${c[0]}</b><span>${c[1].toUpperCase()}</span></div>`).join("")}</div>
+      network: `<section class="ms" id="network"><h2 class="t">Kết nối châu Âu,<br><em>Việt Nam & thế giới</em></h2>
+        <figure class="geographic-map rv"><img src="../img/network-map.svg" width="1200" height="570" alt="Bản đồ thế giới với Việt Nam được tô cam và bản đồ chi tiết châu Âu đánh dấu Anh, Đức, Ba Lan, Séc, Áo, Slovakia" loading="lazy"><figcaption><span>CHÂU ÂU / VIỆT NAM</span><a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a></figcaption></figure>
+        <div class="net">${[["CZ","Czech Republic"],["DE","Germany"],["PL","Poland"],["UK","United Kingdom"],["AT","Austria"],["SK","Slovakia"],["VN","Vietnam"]].map(c=>`<div class="rv"><b>${c[0]}</b><span>${c[1].toUpperCase()}</span></div>`).join("")}</div>
         <p class="lead" style="margin-top:40px">Kết nối năng lực sản xuất tại châu Âu với nghệ sĩ và nguồn lực sáng tạo từ Việt Nam và quốc tế — mở ra cơ hội tổ chức sự kiện xuyên quốc gia, tour diễn và festival.</p></section>`,
       strengths: `<section class="ms" id="strengths"><div class="k">Thế mạnh</div><h2 class="t">Vì sao chọn<br><em>TH Entertainment.</em></h2>
         <div class="str">${strengths.map((s,i)=>`<div class="rv"><b>0${i+1}</b><p>${s}</p></div>`).join("")}</div></section>`,
@@ -92,17 +93,24 @@
         <div class="art">${artists.map(a=>`<div class="ph rv"><img src="${img(a[2])}"><div><b>${a[0]}</b><small>${a[1]}</small></div></div>`).join("")}</div></section>`,
       process: `<section class="ms" id="process"><div class="k">Quy trình</div><h2 class="t">Từ ý tưởng<br><em>đến sân khấu.</em></h2>
         <div class="proc">${process.map(p=>`<div class="rv"><b>${p[0]}</b><h4>${p[1]}</h4><p>${p[2]}</p></div>`).join("")}</div></section>`,
-      gallery: `<section class="ms" id="gallery"><div class="k">Khoảnh khắc</div><h2 class="t">Past<br><em>events.</em></h2>
+      gallery: `<section class="ms" id="gallery"><h2 class="t">Past <em>events</em></h2>
         <div class="gal">${[11,9,4,7,5].map(n=>`<div class="ph rv"><img src="${img(n)}"></div>`).join("")}</div></section>`,
       culture: `<section class="ms" id="culture"><div class="two"><div><div class="k">Dấu ấn văn hóa</div><h2 class="t">Việt Nam<br><em>× châu Âu.</em></h2>
         <p class="lead">Âm nhạc, nghệ thuật và tài năng sáng tạo Việt Nam là một phần quan trọng trong bản sắc của chúng tôi. Thông qua kết nối nghệ sĩ và cộng đồng tại Việt Nam và châu Âu, chúng tôi đưa nghệ thuật đến với các sân khấu quốc tế — đồng thời luôn rộng mở với mọi khán giả, dòng nhạc và nền văn hóa.</p>
         <p class="quote">Cam kết: ý tưởng xứng tầm, nghệ sĩ phù hợp, quy trình chuyên nghiệp.</p></div><div class="ph rv"><img src="${img(6)}"></div></div></section>`,
-      faq: `<section class="ms faq" id="faq"><div class="k">Hỏi đáp</div><h2 class="t">FAQ.</h2>${faq.map((f,i)=>`<details ${i?"":"open"}><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join("")}</section>`,
+      faq: `<section class="ms faq" id="faq"><h2 class="t">FAQ</h2>${faq.map((f,i)=>`<details ${i?"":"open"}><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join("")}</section>`,
       news: `<section class="news" id="presale"><h2>Nhận presale code<br>trước mọi người.</h2><form onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;font-size:18px&quot;>Đã đăng ký ✓</p>'"><input type="email" placeholder="Email của bạn" required><button>ĐĂNG KÝ</button></form></section>`,
       contact: `<section class="ms" id="contact"><div class="ct"><div><div class="k">Liên hệ & hợp tác</div><h2 class="t">Let's<br><em>work together.</em></h2>
         <dl><dt>EMAIL</dt><dd>booking@thentertainment.com</dd><dt>HOTLINE</dt><dd>+420 000 000 000</dd><dt>VĂN PHÒNG</dt><dd>Prague, Czech Republic</dd><dt>SOCIAL</dt><dd><a style="color:inherit" href="https://www.facebook.com/thentertainment1988">Facebook</a> · Instagram · TikTok</dd></dl></div>
-        <form onsubmit="event.preventDefault()"><input placeholder="Họ tên"><input placeholder="Email"><select class="full"><option>Loại yêu cầu: Booking nghệ sĩ</option><option>Tổ chức sự kiện</option><option>Sự kiện doanh nghiệp</option><option>Tài trợ / Đối tác</option></select>
-        <textarea placeholder="Mô tả ngắn về sự kiện: thời gian, địa điểm, quy mô..."></textarea><button>GỬI YÊU CẦU</button></form></div></section>`,
+        <form class="contact-form" onsubmit="event.preventDefault()">
+          <label for="contact-name">Họ và tên <span aria-hidden="true">*</span><input id="contact-name" name="name" autocomplete="name" maxlength="100" required></label>
+          <label for="contact-email">Email <span aria-hidden="true">*</span><input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required></label>
+          <label for="contact-phone">Số điện thoại<input id="contact-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" placeholder="Không bắt buộc"></label>
+          <label for="contact-request">Bạn cần hỗ trợ gì? <span aria-hidden="true">*</span><select id="contact-request" name="request" required><option value="" disabled selected>Chọn nhu cầu</option><option value="artist">Booking nghệ sĩ</option><option value="event">Tổ chức sự kiện</option><option value="corporate">Sự kiện doanh nghiệp</option><option value="partnership">Tài trợ / Đối tác</option></select></label>
+          <label class="full" for="contact-message">Thông tin sự kiện <span aria-hidden="true">*</span><textarea id="contact-message" name="message" rows="5" maxlength="3000" required aria-describedby="contact-hint" placeholder="Chia sẻ ý tưởng của bạn"></textarea></label>
+          <p class="form-hint full" id="contact-hint">Thời gian dự kiến, địa điểm và quy mô khách mời</p>
+          <button type="submit">GỬI YÊU CẦU</button>
+        </form></div></section>`,
     };
     const keys = only || Object.keys(S);
     document.querySelector(sel).innerHTML = keys.map((k) => S[k]).join("");
